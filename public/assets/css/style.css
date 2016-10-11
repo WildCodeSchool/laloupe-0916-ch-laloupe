@@ -10,7 +10,7 @@
   width:15px;
 }
 #scrollspy {
-    background: #f8a348;
+    background: #3e3e3e;
 }
 .btn-urgence {
   background-color: rgb(255,0,0);
@@ -33,15 +33,6 @@ nav ul a.btn-urgence:hover {
     top: 0;
     position: fixed;
 
-}
-
-#push {
-    height: 100px;
-}
-
-#push nav {
-    height: 7em;
-    line-height: 7em;
 }
 
 #push nav li a {
@@ -69,8 +60,8 @@ nav ul a.btn-urgence:hover {
 
 #logo img {
     padding-top: 5px;
-    width: 90px;
-    height: 90px;
+    width: 45px;
+    height: 45px;
 }
 #dropdown1
 {
@@ -158,16 +149,16 @@ p {
   font-size: 6em;
   color: white;
   font-weight: bold;
-  text-shadow: -1px 0 black, 0 2px black,
-      2px 0 black, 0 -1px black
+  text-shadow: -1px 0 black, 0 4px black,
+      4px 0 black, 0 -1px black
 }
 
  .message h5 {
    font-size: 8em;
    color: white;
    font-weight: bold;
-   text-shadow: -1px 0 black, 0 2px black,
-       2px 0 black, 0 -1px black
+   text-shadow: -1px 0 black, 0 4px black,
+       4px 0 black, 0 -1px black
  }
 
 /* page de contact*/
@@ -206,7 +197,7 @@ p {
 }
 
 #bottomNavbar {
-  background-color: #f8a348;
+  background-color: #3e3e3e;
 }
 
 
