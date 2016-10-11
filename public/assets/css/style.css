@@ -32,6 +32,7 @@ nav ul a.btn-urgence:hover {
 .navbar-fixed {
     top: 0;
     position: fixed;
+
 }
 
 #push {
@@ -152,20 +153,23 @@ p {
   left: 5%;
 }
 
-.message {
-  /*box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
-  transition: box-shadow .25s;*/
-  color: black;
-  text-shadow: 4px 4px 3px rgba(129, 129, 129, 1);
-}
 
 .message h3 {
-  font-size: 5em;
+  font-size: 6em;
+  color: white;
+  font-weight: bold;
+  text-shadow: -1px 0 black, 0 2px black,
+      2px 0 black, 0 -1px black
 }
 
  .message h5 {
-   font-size: 4em;
+   font-size: 8em;
+   color: white;
+   font-weight: bold;
+   text-shadow: -1px 0 black, 0 2px black,
+       2px 0 black, 0 -1px black
  }
+
 /* page de contact*/
 .input-field
 {
