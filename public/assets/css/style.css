@@ -1,3 +1,25 @@
+/* First navbar */
+
+.phone a {
+    font-size: 1.7em;
+}
+.access {
+  width:25px;
+}
+#separator {
+  width:15px;
+}
+#scrollspy {
+    background: #f8a348;
+}
+.btn-urgence {
+  background-color: rgb(255,0,0);
+}
+nav ul a.btn-urgence:hover {
+  background-color: rgba(255,0,0,0.8);
+  outline: 0;
+}
+/* Accessibilité */
 .zoom {
     font-size: 2em;
 }
@@ -5,17 +27,6 @@
 .normal {
     font-size: 1.3em;
 }
-
-/* First navbar */
-
-.phone a {
-    font-size: 1.7em;
-}
-
-#scrollspy {
-    background: #ff7400;
-}
-
 /* second navbar */
 
 .navbar-fixed {
@@ -60,6 +71,14 @@
     width: 90px;
     height: 90px;
 }
+#dropdown1
+{
+  font-size: 0.5em;;
+}
+#dropservice
+{
+  color:black;
+}
 
 /* title and paragraph */
 
@@ -73,27 +92,63 @@ p {
 }
 
 /* Slider */
-
 .group-btn {
-  margin-top: 13%;
+  position: absolute;
+  z-index: 20;
+  top: 75%;
+  width: 100%;
 }
 
 .btn {
-  margin: 2% 0 2% 0;
-  height: inherit;
+  height: 180px;
   line-height: inherit;
-  background-color: #ff7400;
+  width: 100%;
+  background-color: transparent;
+}
+
+.btn span {
+  font-size: 1.5em;
+}
+.cont-btn-green {
+    background-color: rgba(96, 142, 58, 0.8)
+}
+
+.cont-btn-violet {
+    background-color: rgba(155, 79, 150, 0.8)
+}
+
+.cont-btn-orange {
+    background-color: rgba(221, 89, 0, 0.8)
+}
+
+.cont-btn-blue {
+    background-color: rgba(0, 158, 160, 0.8)
+}
+.cont-btn-green:hover {
+    background-color: rgba(96, 142, 58, 1)
+}
+
+.cont-btn-violet:hover {
+    background-color: rgba(155, 79, 150, 1)
+}
+
+.cont-btn-orange:hover {
+    background-color: rgba(221, 89, 0, 1)
+}
+
+.cont-btn-blue:hover {
+    background-color: rgba(0, 158, 160, 1)
 }
 
 .group-btn .btn i{
-  font-size:3.5em;
+  font-size:4em;
 }
 
 .title {
   position: absolute;
   z-index: 10;
   width:90%;
-  top: 10%;
+  top: 15%;
   left: 5%;
 }
 
@@ -111,13 +166,23 @@ p {
  .message h5 {
    font-size: 4em;
  }
+/* page de contact*/
+.input-field
+{
+  height:35px;
+}
 
+.nouscontacter
+{
+  text-align:center;
+}
 /* carousel stats */
 
 #stats {
     background-image: url(../img/slider.jpg);
     background-size: cover;
     background-repeat: no-repeat;
+    width: 100vw;
     height: 60vh;
 }
 
@@ -137,7 +202,7 @@ p {
 }
 
 #bottomNavbar {
-  background-color: #ff7400;
+  background-color: #f8a348;
 }
 
 
@@ -158,36 +223,59 @@ p {
 .circle.responsive-img {
     width: 85%;
 }
-
+@media screen and (max-width: 990px){
+  .group-btn {
+    position: relative;
+  }
+}
 
 /* Responsive */
 @media screen and (max-width: 770px){
+  .message h3 {
+    font-size: 4.5em;
+  }
+   .message h5 {
+     font-size: 3.5em;
+   }
+   .group-btn {
+     position: relative;
+     width: 100%;
+   }
+   .group-btn .btn {
+     display: flex;
+     text-align: left;
+   }
+   .group-btn .btn i {
+     font-size: 7em;
+  }
+  .group-btn .btn span {
+    margin-top: 50px;
+    margin-left: 5px;
+    font-size: 1.4em;
+  }
+}
+
+@media screen and (max-width: 600px) {
+
+  .btn {
+    height: 120px;
+  }
+  .group-btn .btn i {
+    font-size: 6em;
+  }
+  .group-btn .btn span {
+    margin-top: 50px;
+    margin-left: 10px;
+    font-size: 1.7em;
+  }
+  .group-btn {
+    width: 100%;
+  }
   .message h3 {
     font-size: 4em;
   }
    .message h5 {
      font-size: 3em;
-   }
-}
-
-@media screen and (max-width: 560px) {
-  .group-btn {
-    margin-top: 15%;
-  }
-  .btn {
-    height: 25%;
-    margin: 2% 0 2% 0;
-    line-height: 1em;
-  }
-  .group-btn .btn i {
-    font-size: 2.5em;
-    padding-top: 20px;
-  }
-  .message h3 {
-    font-size: 3em;
-  }
-   .message h5 {
-     font-size: 2em;
    }
     #bottomNavbar {
         height: 80px;
@@ -222,7 +310,7 @@ p {
     .nav-wrapper span {
         position: absolute;
         font-size: 0.7em;
-        width: 250px;
+        width: 200px;
         padding: 30px 0 0 10px;
         line-height: normal;
         white-space: normal;
@@ -236,24 +324,26 @@ p {
         width: 100%;
     }
     .message h3 {
-      font-size: 2em;
+      font-size: 3.5em;
     }
      .message h5 {
-       font-size: 1.5em;
+       font-size: 2.5em;
      }
-     .group-btn {
-       margin-top: 15%;
-     }
+
      .btn {
-       height: 70px;
-       margin: 1% 0 1% 0;
-       line-height: 1em;
+       height: 100px;
+       line-height: inherit;
      }
      .group-btn .btn i {
+       font-size: 4em;
+     }
+     .group-btn .btn span {
+       margin-top: 35px;
+       margin-left: 10px;
        font-size: 1.5em;
-       padding-top: 12px;
      }
     #stats {
+        width: 90vw;
         height: 35vh;
     }
     #stats h1 {
@@ -269,27 +359,35 @@ p {
         top: 90px;
     }
   }
-
-  @media screen and (max-width: 400px){
-    .message h3 {
-      font-size: 1.5em;
+  @media screen and (max-width: 400px) {
+    #push {
+      height: 80px;
     }
-     .message h5 {
-       font-size: 1.2em;
-     }
-     .group-btn {
-       margin-top: 15%;
-     }
-     .btn {
-       height: 60px;
-       margin: 1% 0 1% 0;
-       line-height: 1em;
-     }
-     .group-btn .btn i {
-       font-size: 1.3em;
-       padding-top: 10px;
-     }
-       #stats {
-           height: 65vh;
-     }
+    #logo img {
+        width: 45%;
+        height: 70%;
+    }
+    .nav-wrapper span {
+        position: absolute;
+        font-size: 0.7em;
+        width: 180px;
+        padding: 20px 0 0 10px;
+        line-height: normal;
+        white-space: normal;
+    }
+    .title{
+      margin-top: 0;
+    }
+    .group-btn {
+      margin-top: 5%;
+    }
   }
+#modal1
+{
+  width: 40%;
+}
+
+#modal1 p
+{
+  margin: 0;
+}
