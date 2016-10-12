@@ -29,6 +29,7 @@ nav ul a.btn-urgence:hover {
     outline: 0;
 }
 
+
 /* Accessibilité */
 
 .zoom {
@@ -68,6 +69,7 @@ nav ul a.btn-urgence:hover {
 
 #logo {
     padding-left: 20px;
+    height: 80px;
 }
 
 #logo img {
@@ -78,7 +80,7 @@ nav ul a.btn-urgence:hover {
 
 #dropdown1 {
     font-size: 0.5em;
-    padding: 0
+    ;
 }
 
 #dropservice {
@@ -103,7 +105,7 @@ p {
 .group-btn {
     position: absolute;
     z-index: 20;
-    top: 75%;
+    top: 70%;
     width: 100%;
 }
 
