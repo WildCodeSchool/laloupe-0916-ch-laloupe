@@ -4,8 +4,6 @@
     font-size: 1.7em;
 }
 
-
-
 .access {
     width: 25px;
 }
@@ -70,7 +68,7 @@ nav ul a.btn-urgence:hover {
 }
 
 #logo {
-    padding-left: 50px;
+    padding-left: 20px;
     height: 80px;
 }
 
@@ -107,7 +105,7 @@ p {
 .group-btn {
     position: absolute;
     z-index: 20;
-    top: 75%;
+    top: 70%;
     width: 100%;
 }
 
