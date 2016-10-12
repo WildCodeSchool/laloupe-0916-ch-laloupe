@@ -10,6 +10,10 @@ class navbarController {
             this.isLogged = isLogged;
             this.user = sessionFactory.user;
         });
+        this.isToggled = false;
+        this.toggleEmergencies = function() {
+          this.isToggled = !this.isToggled;
+        }
     }
 
     logout() {
