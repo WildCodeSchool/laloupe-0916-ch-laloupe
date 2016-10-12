@@ -31,7 +31,7 @@
       </div>
   </nav>
   <!-- Fin premier Menu Navigation -->
-
+  <div id="push">
   <!-- Début deuxieme Menu Navigation -->
       <nav>
           <div id="navbardeux" class="nav-wrapper textevue">
@@ -46,14 +46,15 @@
                       <a class="darklink textevue" href="/#/">Accueil</a>
                   </li>
                   <li>
-                      <a class="darklink textevue" href="badges.html">À propos</a>
+                    <!-- Dropdown Trigger -->
+                    <a id="dropservice" class="dropdown-button textevue" href="#!"  data-beloworigin="true" data-activates="dropdown1">
+                      <i class="material-icons right">arrow_drop_down</i>Nos services</a>
                   </li>
                   <li>
                       <a class="darklink textevue" href="collapsible.html">Actualités</a>
                   </li>
                   <li>
-                    <!-- Dropdown Trigger -->
-                    <a id="dropservice" class="dropdown-button textevue" href="#!"  data-beloworigin="true" data-activates="dropdown1"><i class="material-icons right">arrow_drop_down</i>Nos services</a>
+                      <a class="darklink textevue" href="badges.html">À propos</a>
                   </li>
               </ul>
               <ul class="side-nav flow-text mobmenu" id="mobile-demo">
@@ -70,7 +71,6 @@
                       <a class="darklink" href="mobile.html">Nos services</a>
                   </li>
               </ul>
-              <div id="push">
                 <!-- Dropdown Structure-->
             <ul id="dropdown1" class="dropdown-content">
             <li><a href="#!">Médecine</a></li>
@@ -86,6 +86,7 @@
           </div>
       </nav>
   </div>
+</div>
 <script>
   $(".dropdown-button").dropdown();
 
