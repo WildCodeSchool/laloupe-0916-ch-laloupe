@@ -3,23 +3,37 @@
 .phone a {
     font-size: 1.7em;
 }
+
+
+
 .access {
-  width:25px;
+    width: 25px;
 }
+
 #separator {
-  width:15px;
+    width: 15px;
 }
+
 #scrollspy {
     background: #3e3e3e;
 }
+
 .btn-urgence {
-  background-color: rgb(255,0,0);
+    background-color: rgb(255, 0, 0);
 }
+
+.bolder {
+  font-weight: bold;
+}
+
 nav ul a.btn-urgence:hover {
-  background-color: rgba(255,0,0,0.8);
-  outline: 0;
+    background-color: rgba(255, 0, 0, 0.8);
+    outline: 0;
 }
+
+
 /* Accessibilité */
+
 .zoom {
     font-size: 2em;
 }
@@ -27,7 +41,9 @@ nav ul a.btn-urgence:hover {
 .normal {
     font-size: 1.3em;
 }
-/* second navbar */
+
+
+/* Second Navbar */
 
 .navbar-fixed {
     top: 0;
@@ -55,7 +71,7 @@ nav ul a.btn-urgence:hover {
 
 #logo {
     padding-left: 50px;
-    height: 100px;
+    height: 80px;
 }
 
 #logo img {
@@ -63,14 +79,16 @@ nav ul a.btn-urgence:hover {
     width: 45px;
     height: 45px;
 }
-#dropdown1
-{
-  font-size: 0.5em;;
+
+#dropdown1 {
+    font-size: 0.5em;
+    ;
 }
-#dropservice
-{
-  color:black;
+
+#dropservice {
+    color: black;
 }
+
 
 /* title and paragraph */
 
@@ -83,24 +101,27 @@ p {
     font-size: 1.5em;
 }
 
+
 /* Slider */
+
 .group-btn {
-  position: absolute;
-  z-index: 20;
-  top: 75%;
-  width: 100%;
+    position: absolute;
+    z-index: 20;
+    top: 75%;
+    width: 100%;
 }
 
 .btn {
-  height: 180px;
-  line-height: inherit;
-  width: 100%;
-  background-color: transparent;
+    height: 180px;
+    line-height: inherit;
+    width: 100%;
+    background-color: transparent;
 }
 
 .btn span {
-  font-size: 1.5em;
+    font-size: 1.5em;
 }
+
 .cont-btn-green {
     background-color: rgba(96, 142, 58, 0.8)
 }
@@ -116,6 +137,7 @@ p {
 .cont-btn-blue {
     background-color: rgba(0, 158, 160, 0.8)
 }
+
 .cont-btn-green:hover {
     background-color: rgba(96, 142, 58, 1)
 }
@@ -132,16 +154,16 @@ p {
     background-color: rgba(0, 158, 160, 1)
 }
 
-.group-btn .btn i{
-  font-size:4em;
+.group-btn .btn i {
+    font-size: 4em;
 }
 
 .title {
-  position: absolute;
-  z-index: 10;
-  width:90%;
-  top: 15%;
-  left: 5%;
+    position: absolute;
+    z-index: 10;
+    width: 90%;
+    top: 15%;
+    left: 5%;
 }
 
 
@@ -162,15 +184,16 @@ p {
  }
 
 /* page de contact*/
-.input-field
-{
-  height:35px;
+
+.input-field {
+    height: 35px;
 }
 
-.nouscontacter
-{
-  text-align:center;
+.nouscontacter {
+    text-align: center;
 }
+
+
 /* carousel stats */
 
 #stats {
@@ -189,6 +212,7 @@ p {
     top: 20%;
     width: 25%;
 }
+
 
 /* footer */
 
@@ -218,60 +242,62 @@ p {
 .circle.responsive-img {
     width: 85%;
 }
-@media screen and (max-width: 990px){
-  .group-btn {
-    position: relative;
-  }
+
+@media screen and (max-width: 990px) {
+    .group-btn {
+        position: relative;
+    }
 }
 
+
 /* Responsive */
-@media screen and (max-width: 770px){
-  .message h3 {
-    font-size: 4.5em;
-  }
-   .message h5 {
-     font-size: 3.5em;
-   }
-   .group-btn {
-     position: relative;
-     width: 100%;
-   }
-   .group-btn .btn {
-     display: flex;
-     text-align: left;
-   }
-   .group-btn .btn i {
-     font-size: 7em;
-  }
-  .group-btn .btn span {
-    margin-top: 50px;
-    margin-left: 5px;
-    font-size: 1.4em;
-  }
+
+@media screen and (max-width: 770px) {
+    .message h3 {
+        font-size: 4.5em;
+    }
+    .message h5 {
+        font-size: 3.5em;
+    }
+    .group-btn {
+        position: relative;
+        width: 100%;
+    }
+    .group-btn .btn {
+        display: flex;
+        text-align: left;
+    }
+    .group-btn .btn i {
+        font-size: 7em;
+    }
+    .group-btn .btn span {
+        margin-top: 50px;
+        margin-left: 5px;
+        font-size: 1.4em;
+    }
 }
 
 @media screen and (max-width: 600px) {
-
-  .btn {
-    height: 120px;
-  }
-  .group-btn .btn i {
-    font-size: 6em;
-  }
-  .group-btn .btn span {
-    margin-top: 50px;
-    margin-left: 10px;
-    font-size: 1.7em;
-  }
-  .group-btn {
-    width: 100%;
-  }
-  .message h3 {
-    font-size: 4em;
-  }
-   .message h5 {
-     font-size: 3em;
-   }
+    .btn {
+        height: 120px;
+    }
+    .group-btn .btn i {
+        font-size: 6em;
+    }
+    .group-btn .btn span {
+        margin-top: 50px;
+        margin-left: 10px;
+        font-size: 1.7em;
+    }
+    .group-btn {
+        width: 100%;
+    }
+    .message h3 {
+        font-size: 4em;
+    }
+    .message h5 {
+        font-size: 3em;
+    }
     #bottomNavbar {
         height: 80px;
         line-height: 40px;
@@ -319,24 +345,23 @@ p {
         width: 100%;
     }
     .message h3 {
-      font-size: 3.5em;
+        font-size: 3.5em;
     }
-     .message h5 {
-       font-size: 2.5em;
-     }
-
-     .btn {
-       height: 100px;
-       line-height: inherit;
-     }
-     .group-btn .btn i {
-       font-size: 4em;
-     }
-     .group-btn .btn span {
-       margin-top: 35px;
-       margin-left: 10px;
-       font-size: 1.5em;
-     }
+    .message h5 {
+        font-size: 2.5em;
+    }
+    .btn {
+        height: 100px;
+        line-height: inherit;
+    }
+    .group-btn .btn i {
+        font-size: 4em;
+    }
+    .group-btn .btn span {
+        margin-top: 35px;
+        margin-left: 10px;
+        font-size: 1.5em;
+    }
     #stats {
         width: 90vw;
         height: 35vh;
@@ -353,10 +378,11 @@ p {
     #stats a {
         top: 90px;
     }
-  }
-  @media screen and (max-width: 400px) {
+}
+
+@media screen and (max-width: 400px) {
     #push {
-      height: 80px;
+        height: 80px;
     }
     #logo img {
         width: 45%;
@@ -370,19 +396,34 @@ p {
         line-height: normal;
         white-space: normal;
     }
-    .title{
-      margin-top: 0;
+    .title {
+        margin-top: 0;
     }
     .group-btn {
-      margin-top: 5%;
+        margin-top: 5%;
     }
-  }
-#modal1
-{
-  width: 40%;
 }
 
-#modal1 p
-{
-  margin: 0;
+#modal1 {
+    width: 40%;
+}
+
+#modal1 p {
+    margin: 0;
+}
+
+#testdropdown {
+    width: 20%;
+    height: 20%;
+    text-align: center;
+    line-height: 90px;
+}
+
+#rdvslider {
+    height: 100vh;
+    width: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
 }
