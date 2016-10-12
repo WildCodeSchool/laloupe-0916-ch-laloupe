@@ -6,6 +6,10 @@ class navbarController {
         this.$rootScope = $rootScope;
         this.$location = $location;
 
+        $(document).ready(function (){
+            $(".dropdown-button").dropdown();
+        });
+
         $rootScope.$on('loginStatusChanged', (event, isLogged) => {
             this.isLogged = isLogged;
             this.user = sessionFactory.user;
