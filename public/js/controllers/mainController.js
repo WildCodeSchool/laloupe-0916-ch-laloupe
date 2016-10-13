@@ -58,11 +58,31 @@ $(document).ready(function(){
   $('.modal-trigger').leanModal();
 });
 
+this.isLoad = false;
+this.toggleConsultation = function() {
+this.isLoad = !this.isLoad;
+};
 
+this.isLoad1 = false;
+this.toggleHospitalise = function() {
+this.isLoad1 = !this.isLoad1;
+};
+
+this.isLoad2 = false;
+this.toggleEhpad = function() {
+this.isLoad2 = !this.isLoad2;
+};
+
+this.isLoad3 = false;
+this.togglePatient = function() {
+this.isLoad3 = !this.isLoad3;
+};
+
+}
 
         /*this.todoService = todoService;
         this.load();*/
-    }
+
 /*
     load() {
         this.todoService.getAll().then((res) => {

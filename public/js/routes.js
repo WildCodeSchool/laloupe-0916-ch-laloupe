@@ -22,9 +22,6 @@ const routes = ($routeProvider, $httpProvider) => {
             controller: 'loginController',
             controllerAs: 'vm'
         })
-        .when('/vuebtn', {
-            templateUrl: 'views/vuebtn.html',
-        })
         .otherwise({
             redirectTo: '/'
         })
