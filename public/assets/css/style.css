@@ -1,7 +1,9 @@
 /* Urgencies */
+
 #urgencies {
-  background-color: rgb(216, 8, 8);
+    background-color: rgb(216, 8, 8);
 }
+
 
 /* First navbar */
 
@@ -26,7 +28,7 @@
 }
 
 .bolder {
-  font-weight: bold;
+    font-weight: bold;
 }
 
 nav ul a.btn-urgence:hover {
@@ -51,7 +53,6 @@ nav ul a.btn-urgence:hover {
 .navbar-fixed {
     top: 0;
     position: fixed;
-
 }
 
 #push nav li a {
@@ -96,8 +97,9 @@ nav ul a.btn-urgence:hover {
 /* title and paragraph */
 
 h1 {
-    font-size: 2.5em;
-    font-weight: 300;
+    font-size: 6em;
+    color: white;
+    text-shadow: 0 1px 0 #ccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaa, 0 6px 1px rgba(0, 0, 0, .1), 0 0 5px rgba(0, 0, 0, .1), 0 1px 3px rgba(0, 0, 0, .3), 0 3px 5px rgba(0, 0, 0, .2), 0 5px 10px rgba(0, 0, 0, .25), 0 10px 10px rgba(0, 0, 0, .2), 0 20px 20px rgba(0, 0, 0, .15);
 }
 
 p {
@@ -170,22 +172,6 @@ p {
 }
 
 
-.message h3 {
-  font-size: 6em;
-  color: white;
-  font-weight: bold;
-  text-shadow: -1px 0 black, 0 4px black,
-      4px 0 black, 0 -1px black
-}
-
- .message h5 {
-   font-size: 8em;
-   color: white;
-   font-weight: bold;
-   text-shadow: -1px 0 black, 0 4px black,
-       4px 0 black, 0 -1px black
- }
-
 /* page de contact*/
 
 .input-field {
@@ -224,7 +210,7 @@ p {
 }
 
 #bottomNavbar {
-  background-color: #3e3e3e;
+    background-color: #3e3e3e;
 }
 
 
@@ -256,11 +242,8 @@ p {
 /* Responsive */
 
 @media screen and (max-width: 770px) {
-    .message h3 {
+    h1 {
         font-size: 4.5em;
-    }
-    .message h5 {
-        font-size: 3.5em;
     }
     .group-btn {
         position: relative;
@@ -295,11 +278,9 @@ p {
     .group-btn {
         width: 100%;
     }
-    .message h3 {
-        font-size: 4em;
-    }
-    .message h5 {
-        font-size: 3em;
+    h1 {
+        font-size: 6em;
+        color: white;
     }
     #bottomNavbar {
         height: 80px;
@@ -347,11 +328,8 @@ p {
     #scrollspy .right {
         width: 100%;
     }
-    .message h3 {
+    h1 {
         font-size: 3.5em;
-    }
-    .message h5 {
-        font-size: 2.5em;
     }
     .btn {
         height: 100px;
