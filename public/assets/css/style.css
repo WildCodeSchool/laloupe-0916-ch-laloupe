@@ -69,7 +69,7 @@ nav ul a.btn-urgence:hover {
     color: black;
 }
 
-.material-icons.right{
+.arrowdropdown{
   margin-top: 8px
 }
 
@@ -129,7 +129,7 @@ p {
     width: 100%;
 }
 
-.btn {
+.sliderbtn {
     height: 180px;
     line-height: inherit;
     width: 100%;
