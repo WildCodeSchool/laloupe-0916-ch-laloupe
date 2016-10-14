@@ -377,25 +377,6 @@ p {
 }
 
 @media screen and (max-width: 600px) {
-<<<<<<< HEAD
-    .btn {
-=======
-    /*  .btn {
->>>>>>> adrien14afternoon
-        height: 120px;
-    }
-    .group-btn .btn i {
-        font-size: 6em;
-    }
-    .group-btn .btn span {
-        margin-top: 50px;
-        margin-left: 10px;
-        font-size: 1.7em;
-    }
-    .group-btn {
-        width: 100%;
-    } */
-
     h1 {
         font-size: 4em;
     }
