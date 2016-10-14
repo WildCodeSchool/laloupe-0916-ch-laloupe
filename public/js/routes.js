@@ -14,6 +14,11 @@ const routes = ($routeProvider, $httpProvider) => {
             controller: 'contactController',
             controllerAs: 'vm'
         })
+        .when('/plandusite', {
+            templateUrl: 'views/plandusite.html',
+            controller: 'contactController',
+            controllerAs: 'vm'
+        })
         .when('/ehpad', {
             templateUrl: 'views/ehpad/ehpad.html',
         })
