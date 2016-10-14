@@ -1,48 +1,53 @@
 <div id="topFixed"></div>
 <div class="slider" id="scrollslider">
-  <div class="caption center-align title">
-    <div class="message">
-      <h1>Bienvenue<br>au Centre Hospitalier de La Loupe</h1>
+    <div class="caption center-align title">
+        <div class="message">
+            <h1>Bienvenue<br>au Centre Hospitalier de La Loupe</h1>
+        </div>
+        <div class="row col l3 m12 group-btn">
+            <div class="cont-btn col l3 m6 s12">
+                <a class="btn consult cont-btn-green waves-effect btnresponsive" ng-click='vm.toggleConsultation()'>
+                    <i class="material-icons iconButton">insert_invitation</i><br>
+                    <span>J'ai un rendez-vous</span>
+                </a>
+            </div>
+            <div class="cont-btn col l3 m6 s12">
+                <a class="btn cont-btn-violet waves-effect btnresponsive" ng-click='vm.toggleHospitalise()'>
+                    <i class="material-icons iconButton">local_hospital</i><br>
+                    <span>Je vais être hospitalisé</span>
+                </a>
+            </div>
+            <div class="cont-btn col l3 m6 s12">
+                <a class="btn cont-btn-orange waves-effect btnresponsive" ng-click='vm.toggleEhpad()'>
+                    <i class="material-icons iconButton">home</i><br>
+                    <span>Je vais entrer en EHPAD</span>
+                </a>
+            </div>
+            <div class="cont-btn col l3 m6 s12">
+                <a class="btn cont-btn-blue waves-effect btnresponsive" ng-click='vm.togglePatient()'>
+                    <i class="material-icons iconButton">transfer_within_a_station</i><br>
+                    <span>Je vais voir un patient</span>
+                </a>
+            </div>
+        </div>
     </div>
-  </div>
     <ul class="slides">
-      <li>
-        <img src="../assets/img/hopital.jpg"> <!-- random image -->
-      </li>
-      <li>
-        <img src="../assets/img/foret.jpg"> <!-- random image -->
-      </li>
-      <li>
-        <img src="../assets/img/ehpad.jpg"> <!-- random image -->
-      </li>
+        <li>
+            <img src="../assets/img/hopital.jpg">
+            <!-- random image -->
+        </li>
+        <li>
+            <img src="../assets/img/foret.jpg">
+            <!-- random image -->
+        </li>
+        <li>
+            <img src="../assets/img/ehpad.jpg">
+            <!-- random image -->
+        </li>
     </ul>
 </div>
-<div class="row col l3 m12 group-btn">
-    <div class="cont-btn col l3 m6 s12">
-        <a class="btn consult cont-btn-green waves-effect" ng-click='vm.toggleConsultation()'>
-            <i class="material-icons iconButton">insert_invitation</i><br>
-            <span>J'ai un rendez-vous</span>
-        </a>
-    </div>
-    <div class="cont-btn col l3 m6 s12">
-        <a class="btn cont-btn-violet waves-effect" ng-click='vm.toggleHospitalise()'>
-            <i class="material-icons iconButton">local_hospital</i><br>
-            <span>Je vais être hospitalisé</span>
-        </a>
-    </div>
-    <div class="cont-btn col l3 m6 s12">
-      <a class="btn cont-btn-orange waves-effect" ng-click='vm.toggleEhpad()'>
-        <i class="material-icons iconButton">home</i><br>
-        <span>Je vais entrer en EHPAD</span>
-      </a>
-    </div>
-    <div class="cont-btn col l3 m6 s12">
-        <a class="btn cont-btn-blue waves-effect" ng-click='vm.togglePatient()'>
-            <i class="material-icons iconButton">transfer_within_a_station</i><br>
-            <span>Je vais voir un patient</span>
-        </a>
-    </div>
-  </div>
+
+
   <!--div ng-show "j'ai un rendez-vous"-->
 <div class="container-fluid sub-menu-consultation" id="scroll1">
     <div ng-show='vm.isLoad'>
