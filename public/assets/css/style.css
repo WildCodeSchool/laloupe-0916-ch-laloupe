@@ -59,8 +59,18 @@ nav ul a.btn-urgence:hover {
     position: fixed;
 }
 
+#push nav{
+  height: 84px;
+  line-height: 84px;
+}
+
 #push nav li a {
-    font-size: 1.6em;
+    font-size: 1.3em;
+    color: black;
+}
+
+.material-icons.right{
+  margin-top: 8px
 }
 
 #navbardeux {
@@ -73,7 +83,6 @@ nav ul a.btn-urgence:hover {
 
 .nav-wrapper span {
     position: absolute;
-    font-size: 0.8em;
     padding-left: 10px;
 }
 
@@ -84,8 +93,8 @@ nav ul a.btn-urgence:hover {
 
 #logo img {
     padding-top: 5px;
-    width: 45px;
-    height: 45px;
+    width: 65px;
+    height: 65px;
 }
 
 #dropdown1 {
@@ -322,7 +331,7 @@ p {
 }
 
 @media screen and (max-width: 600px) {
-    .btn {
+      .btn {
         height: 120px;
     }
     .group-btn .btn i {
@@ -357,7 +366,7 @@ p {
 @media screen and (max-width: 500px) {
     nav {
         height: 80px;
-        line-height: 40px;
+        line-height: 0px;
     }
     #logo img {
         width: 65%;
