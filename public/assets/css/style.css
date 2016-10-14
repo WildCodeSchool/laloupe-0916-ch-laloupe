@@ -59,9 +59,9 @@ nav ul a.btn-urgence:hover {
     position: fixed;
 }
 
-#push nav{
-  height: 84px;
-  line-height: 84px;
+#push nav {
+    height: 84px;
+    line-height: 84px;
 }
 
 #push nav li a {
@@ -69,8 +69,8 @@ nav ul a.btn-urgence:hover {
     color: black;
 }
 
-.material-icons.right{
-  margin-top: 8px
+.material-icons.right {
+    margin-top: 8px
 }
 
 #navbardeux {
@@ -336,7 +336,7 @@ p {
 }
 
 @media screen and (max-width: 600px) {
-      .btn {
+    .btn {
         height: 120px;
     }
     .group-btn .btn i {
@@ -498,4 +498,26 @@ kbd {
     margin: 0 0.1em;
     padding: 0.1em 0.6em;
     text-shadow: 0 1px 0 #fff;
+}
+
+.card-action {
+    margin-left: 38%;
+}
+
+.card-content {
+    text-align: justify;
+}
+
+.list {
+    margin-left: 10%;
+}
+
+.box2 {
+    width: 70%;
+    margin-left: 15%;
+}
+
+.box1 {
+    width: 70%;
+    margin-left: 15%;
 }
