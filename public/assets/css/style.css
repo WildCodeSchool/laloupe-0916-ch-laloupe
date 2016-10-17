@@ -123,14 +123,10 @@ p {
 /* Slider */
 
 .group-btn {
-    /* position: absolute; */
+    position: absolute;
     z-index: 20;
-    float: left;
-    padding-left: 8.8%;
-    padding-top: 12%;
-
-    /* top: 70%
-    width: 100%; */
+    top: 70%;
+    width: 100%;
 }
 
 .sliderbtn {
@@ -308,57 +304,20 @@ p {
     width: 85%;
 }
 
+@media screen and (max-width: 990px) {
+    .group-btn {
+        position: relative;
+    }
+}
+
 
 /* Responsive */
 
-@media screen(min-width: 1023px)  {
-  h1 {
-      font-size: 6em;
-  }
-  .btnresponsive {
-    max-height: 14vh;
-  }
-  .group-btn .btn span {
-      font-size: 4em;
-  }
-  .group-btn .btn i {
-      font-size: 4.5em;
-  }
-
-    @media screen and (max-width: 990px) {
-    /* .group-btn {
-     position: relative;
-        } */
+@media screen and (max-width: 770px) {
     h1 {
-        font-size: 5em;
-    }
-    .btnresponsive {
-      max-height: 13vh;
-    }
-    .group-btn .btn span {
-        font-size: 3.5em;
-    }
-    .group-btn .btn i {
         font-size: 4.5em;
     }
-  }
-
-
-@media screen and (max-width: 770px) {
-  h1 {
-      font-size: 4.5em;
-  }
-  .btnresponsive {
-    max-height: 11vh;
-  }
-  .group-btn .btn span {
-      font-size: 3em;
-  }
-  .group-btn .btn i {
-      font-size: 4.5em;
-  }
-
-    /* .group-btn {
+    .group-btn {
         position: relative;
         width: 100%;
     }
@@ -372,22 +331,28 @@ p {
     .group-btn .btn span {
         margin-top: 50px;
         margin-left: 5px;
-        font-size: 1.4em; */
+        font-size: 1.4em;
     }
 }
 
 @media screen and (max-width: 600px) {
-    h1 {
-        font-size: 4em;
-    }
-    .btnresponsive {
-      max-height: 9vh;
-    }
-    .group-btn .btn span {
-        font-size: 2em;
+    .btn {
+        height: 120px;
     }
     .group-btn .btn i {
-        font-size: 4em;
+        font-size: 6em;
+    }
+    .group-btn .btn span {
+        margin-top: 50px;
+        margin-left: 10px;
+        font-size: 1.7em;
+    }
+    .group-btn {
+        width: 100%;
+    }
+    h1 {
+        font-size: 6em;
+        color: white;
     }
     #bottomNavbar {
         height: 80px;
@@ -403,7 +368,7 @@ p {
     }
 }
 
- @media screen and (max-width: 500px) {
+@media screen and (max-width: 500px) {
     nav {
         height: 80px;
         line-height: 0px;
@@ -435,7 +400,10 @@ p {
     #scrollspy .right {
         width: 100%;
     }
-    /* .btn {
+    h1 {
+        font-size: 3.5em;
+    }
+    .btn {
         height: 100px;
         line-height: inherit;
     }
@@ -446,19 +414,6 @@ p {
         margin-top: 35px;
         margin-left: 10px;
         font-size: 1.5em;
-    } */
-
-    h1 {
-        font-size: 2.5em;
-    }
-    .btnresponsive {
-      max-height: 7.5vh;
-    }
-    .group-btn .btn span {
-        font-size: 1em;
-    }
-    .iconButton {
-      display: none;
     }
     #stats {
         width: 90vw;
@@ -497,21 +452,10 @@ p {
     .title {
         margin-top: 0;
     }
-    /* .group-btn {
+    .group-btn {
         margin-top: 5%;
-    } */
-    .btnresponsive {
-      max-height: 9vh;
     }
-    .iconButton {
-      display: none;
-    }
-    .group-btn .btn span {
-        font-size: 1em;
-    }
-    h1 {
-        font-size: 2em;
-    }
+}
 
 #testdropdown {
     width: 20%;
