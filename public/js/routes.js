@@ -20,7 +20,7 @@ const routes = ($routeProvider, $httpProvider) => {
             controllerAs: 'vm'
         })
         .when('/ehpad', {
-            templateUrl: 'views/ehpad/ehpad.html',
+            templateUrl: 'views/category/ehpad.html',
         })
         .when('/actualite', {
             templateUrl: 'views/actualite/actualite.html',
