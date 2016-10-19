@@ -32,6 +32,18 @@ export default class Categorie {
         });
     }
 
+    findParent(req, res) {
+    model.find({
+        idparent: req.params.idparent
+    }, (err, categories) => {
+        if (err) {
+            res.sendStatus(403);
+        } else {
+            res.json(categories);
+        }
+    });
+}
+
     create(req, res) {
         model.create({
                 titre: req.body.titre,

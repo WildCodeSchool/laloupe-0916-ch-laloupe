@@ -6,6 +6,12 @@ const routes = ($routeProvider, $httpProvider) => {
             controller: 'mainController',
             controllerAs: 'vm'
         })
+
+    .when('/admin/contact', {
+            templateUrl: 'views/admin/addcontact.html',
+            controller: 'contactController',
+            controllerAs: 'vm'
+        })
         .when('/legals', {
             templateUrl: 'views/mentions/legals.html'
         })
@@ -33,9 +39,30 @@ const routes = ($routeProvider, $httpProvider) => {
             controller: 'loginController',
             controllerAs: 'vm'
         })
+        .when('/admin/categorie', {
+          templateUrl: 'views/categorie/addcategorie.html',
+          controller: 'categorieController',
+          controllerAs: 'vm'
+        })
+        .when('/service/:id', {
+          templateUrl: 'views/categorie/categorie.html',
+          controller: 'categorieController',
+          controllerAs: 'vm'
+        })
+        .when('/contact', {
+          templateUrl: 'views/contact/contact.html',
+          controller: 'contactController',
+          controllerAs: 'vm'
+        })
+        .when('/editor', {
+          templateUrl: 'views/admin/editor.html',
+          controller: 'mainController',
+          controllerAs: 'vm'
+        })
         .otherwise({
             redirectTo: '/'
-        })
+        });
+
 
     $httpProvider.interceptors.push(($q, $location, $rootScope, $window, sessionFactory) => {
         return {
