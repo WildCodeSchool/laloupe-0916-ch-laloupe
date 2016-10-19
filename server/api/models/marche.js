@@ -1,47 +1,46 @@
 import mongoose from 'mongoose';
 
-const todoSchema = new mongoose.Schema({
-    name: String,
-    num:String,
-    spec:String
+const marcheSchema = new mongoose.Schema({
+    texte: String,
+    titre: String,
+    lien: String
 });
 
-let model = mongoose.model('Todo', todoSchema);
+let model = mongoose.model('Marche', marcheSchema);
 
-export default class Todo {
+export default class Marche {
 
     findAll(req, res) {
-        model.find({}, (err, todos) => {
+        model.find({}, (err, marches) => {
             if (err) {
                 res.sendStatus(403);
             } else {
-                res.json(todos);
+                res.json(marches);
             }
         });
     }
 
     findById(req, res) {
-        model.findById(req.params.id, (err, todo) => {
-            if (err || !todo) {
+        model.findById(req.params.id, (err, marche) => {
+            if (err || !marche) {
                 res.sendStatus(403);
             } else {
-                res.json(todo);
+                res.json(marche);
             }
         });
     }
 
     create(req, res) {
         model.create({
-                name: req.body.name,
-                num: req.body.num,
-                spec: req.body.spec
-
+                texte: req.body.texte,
+                titre: req.body.titre,
+                lien: req.body.lien
             },
-            (err, todo) => {
+            (err, marche) => {
                 if (err) {
                     res.status(500).send(err.message);
                 } else {
-                    res.json(todo);
+                    res.json(marche);
                 }
             });
     }
@@ -49,15 +48,11 @@ export default class Todo {
     update(req, res) {
         model.update({
             _id: req.params.id
-        }, {
-                name: req.body.name,
-                num: req.body.num,
-                spec: req.body.spec
-        }, (err, todo) => {
-            if (err || !todo) {
+        }, req.body, (err, marche) => {
+            if (err || !marche) {
                 res.status(500).send(err.message);
             } else {
-                res.json(todo);
+                res.json(marche);
             }
         });
     }
@@ -69,6 +64,6 @@ export default class Todo {
             } else {
                 res.sendStatus(200);
             }
-        })
+        });
     }
 }

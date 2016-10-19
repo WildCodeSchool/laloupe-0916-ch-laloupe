@@ -119,6 +119,10 @@ p {
     font-size: 1.5em;
 }
 
+.flow-text.justify
+{
+padding: 10px
+}
 
 /* Slider */
 

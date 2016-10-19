@@ -1,47 +1,44 @@
 import mongoose from 'mongoose';
 
-const todoSchema = new mongoose.Schema({
-    name: String,
-    num:String,
-    spec:String
+const contactSchema = new mongoose.Schema({
+    nom: String,
+    telephone: String
 });
 
-let model = mongoose.model('Todo', todoSchema);
+let model = mongoose.model('Contact', contactSchema);
 
-export default class Todo {
+export default class Contact {
 
     findAll(req, res) {
-        model.find({}, (err, todos) => {
+        model.find({}, (err, contacts) => {
             if (err) {
                 res.sendStatus(403);
             } else {
-                res.json(todos);
+                res.json(contacts);
             }
         });
     }
 
     findById(req, res) {
-        model.findById(req.params.id, (err, todo) => {
-            if (err || !todo) {
+        model.findById(req.params.id, (err, contact) => {
+            if (err || !contact) {
                 res.sendStatus(403);
             } else {
-                res.json(todo);
+                res.json(contact);
             }
         });
     }
 
     create(req, res) {
         model.create({
-                name: req.body.name,
-                num: req.body.num,
-                spec: req.body.spec
-
+                nom: req.body.nom,
+                telephone: req.body.telephone
             },
-            (err, todo) => {
+            (err, contact) => {
                 if (err) {
                     res.status(500).send(err.message);
                 } else {
-                    res.json(todo);
+                    res.json(contact);
                 }
             });
     }
@@ -49,15 +46,11 @@ export default class Todo {
     update(req, res) {
         model.update({
             _id: req.params.id
-        }, {
-                name: req.body.name,
-                num: req.body.num,
-                spec: req.body.spec
-        }, (err, todo) => {
-            if (err || !todo) {
+        }, req.body, (err, contact) => {
+            if (err || !contact) {
                 res.status(500).send(err.message);
             } else {
-                res.json(todo);
+                res.json(contact);
             }
         });
     }
@@ -69,6 +62,6 @@ export default class Todo {
             } else {
                 res.sendStatus(200);
             }
-        })
+        });
     }
 }

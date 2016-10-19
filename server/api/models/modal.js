@@ -1,47 +1,46 @@
 import mongoose from 'mongoose';
 
-const todoSchema = new mongoose.Schema({
-    name: String,
-    num:String,
-    spec:String
+const modalSchema = new mongoose.Schema({
+    texte: String,
+    titre: String,
+    idparent: String
 });
 
-let model = mongoose.model('Todo', todoSchema);
+let model = mongoose.model('Modal', modalSchema);
 
-export default class Todo {
+export default class Modal {
 
     findAll(req, res) {
-        model.find({}, (err, todos) => {
+        model.find({}, (err, modals) => {
             if (err) {
                 res.sendStatus(403);
             } else {
-                res.json(todos);
+                res.json(modals);
             }
         });
     }
 
     findById(req, res) {
-        model.findById(req.params.id, (err, todo) => {
-            if (err || !todo) {
+        model.findById(req.params.id, (err, modal) => {
+            if (err || !modal) {
                 res.sendStatus(403);
             } else {
-                res.json(todo);
+                res.json(modal);
             }
         });
     }
 
     create(req, res) {
         model.create({
-                name: req.body.name,
-                num: req.body.num,
-                spec: req.body.spec
-
+                texte: req.body.texte,
+                titre: req.body.titre,
+                idparent: req.body.idparent
             },
-            (err, todo) => {
+            (err, modal) => {
                 if (err) {
                     res.status(500).send(err.message);
                 } else {
-                    res.json(todo);
+                    res.json(modal);
                 }
             });
     }
@@ -49,15 +48,11 @@ export default class Todo {
     update(req, res) {
         model.update({
             _id: req.params.id
-        }, {
-                name: req.body.name,
-                num: req.body.num,
-                spec: req.body.spec
-        }, (err, todo) => {
-            if (err || !todo) {
+        }, req.body, (err, modal) => {
+            if (err || !modal) {
                 res.status(500).send(err.message);
             } else {
-                res.json(todo);
+                res.json(modal);
             }
         });
     }
@@ -69,6 +64,6 @@ export default class Todo {
             } else {
                 res.sendStatus(200);
             }
-        })
+        });
     }
 }
