@@ -67,7 +67,7 @@ nav ul a.btn-urgence:hover {
 }
 
 #push nav {
-    height:100px;
+    height: 100px;
     line-height: 100px;
 }
 
@@ -76,8 +76,8 @@ nav ul a.btn-urgence:hover {
     color: black;
 }
 
-.arrowdropdown{
-  margin-top: 8px
+.arrowdropdown {
+    margin-top: 8px
 }
 
 #navbardeux {
@@ -126,10 +126,10 @@ p {
     font-size: 1.5em;
 }
 
-.flow-text.justify
-{
-padding: 10px
+.flow-text.justify {
+    padding: 10px
 }
+
 
 /* Slider */
 
@@ -139,9 +139,8 @@ padding: 10px
     float: left;
     padding-left: 8.8%;
     padding-top: 12%;
-
     /* top: 70%
-    width: 100%; */
+width: 100%; */
 }
 
 .sliderbtn {
@@ -322,68 +321,52 @@ padding: 10px
 
 /* Responsive */
 
-@media screen(min-width: 1023px)  {
-  h1 {
-      font-size: 6em;
-  }
-  .btnresponsive {
-    max-height: 14vh;
-  }
-  .group-btn .btn span {
-      font-size: 4em;
-  }
-  .group-btn .btn i {
-      font-size: 4.5em;
-  }
+@media screen and (max-width: 1160px) {
+    .hideaccueilespecedebanane {
+        display: none!important;
+    }
+}
 
-    @media screen and (max-width: 990px) {
-    /* .group-btn {
-     position: relative;
-        } */
+@media screen(min-width: 1023px) {
     h1 {
-        font-size: 5em;
+        font-size: 6em;
     }
     .btnresponsive {
-      max-height: 13vh;
+        max-height: 14vh;
     }
     .group-btn .btn span {
-        font-size: 3.5em;
+        font-size: 4em;
     }
     .group-btn .btn i {
         font-size: 4.5em;
     }
-  }
-
-
-@media screen and (max-width: 770px) {
-  h1 {
-      font-size: 4.5em;
-  }
-  .btnresponsive {
-    max-height: 11vh;
-  }
-  .group-btn .btn span {
-      font-size: 3em;
-  }
-  .group-btn .btn i {
-      font-size: 4.5em;
-  }
-
-    /* .group-btn {
-        position: relative;
-        width: 100%;
+    @media screen and (max-width: 990px) {
+        h1 {
+            font-size: 5em;
+        }
+        .btnresponsive {
+            max-height: 13vh;
+        }
+        .group-btn .btn span {
+            font-size: 3.5em;
+        }
+        .group-btn .btn i {
+            font-size: 4.5em;
+        }
     }
-    .group-btn .btn {
-        display: flex;
-        text-align: left;
-    }
-    .group-btn .btn i {
-        font-size: 7em;
-    }
-    .group-btn .btn span {
-        margin-top: 50px;
-        margin-left: 5px;
-        font-size: 1.4em; */
+    @media screen and (max-width: 770px) {
+        h1 {
+            font-size: 4.5em;
+        }
+        .btnresponsive {
+            max-height: 11vh;
+        }
+        .group-btn .btn span {
+            font-size: 3em;
+        }
+        .group-btn .btn i {
+            font-size: 4.5em;
+        }
     }
 }
 
@@ -392,7 +375,7 @@ padding: 10px
         font-size: 4em;
     }
     .btnresponsive {
-      max-height: 9vh;
+        max-height: 9vh;
     }
     .group-btn .btn span {
         font-size: 2em;
@@ -414,7 +397,7 @@ padding: 10px
     }
 }
 
- @media screen and (max-width: 500px) {
+@media screen and (max-width: 500px) {
     nav {
         height: 80px;
         line-height: 0px;
@@ -447,29 +430,28 @@ padding: 10px
         width: 100%;
     }
     /* .btn {
-        height: 100px;
-        line-height: inherit;
-    }
-    .group-btn .btn i {
-        font-size: 4em;
-    }
-    .group-btn .btn span {
-        margin-top: 35px;
-        margin-left: 10px;
-        font-size: 1.5em;
-    } */
-
+height: 100px;
+line-height: inherit;
+}
+.group-btn .btn i {
+font-size: 4em;
+}
+.group-btn .btn span {
+margin-top: 35px;
+margin-left: 10px;
+font-size: 1.5em;
+} */
     h1 {
         font-size: 2.5em;
     }
     .btnresponsive {
-      max-height: 7.5vh;
+        max-height: 7.5vh;
     }
     .group-btn .btn span {
         font-size: 1em;
     }
     .iconButton {
-      display: none;
+        display: none;
     }
     #stats {
         width: 90vw;
@@ -509,13 +491,13 @@ padding: 10px
         margin-top: 0;
     }
     /* .group-btn {
-        margin-top: 5%;
-    } */
+margin-top: 5%;
+} */
     .btnresponsive {
-      max-height: 9vh;
+        max-height: 9vh;
     }
     .iconButton {
-      display: none;
+        display: none;
     }
     .group-btn .btn span {
         font-size: 1em;
@@ -523,21 +505,20 @@ padding: 10px
     h1 {
         font-size: 2em;
     }
-
-#testdropdown {
-    width: 20%;
-    height: 20%;
-    text-align: center;
-    line-height: 90px;
-}
-
-#rdvslider {
-    height: 100vh;
-    width: 100vh;
-    position: fixed;
-    top: 0;
-    left: 0;
-    display: none;
+    #testdropdown {
+        width: 20%;
+        height: 20%;
+        text-align: center;
+        line-height: 90px;
+    }
+    #rdvslider {
+        height: 100vh;
+        width: 100vh;
+        position: fixed;
+        top: 0;
+        left: 0;
+        display: none;
+    }
 }
 
 .secondary-content {
