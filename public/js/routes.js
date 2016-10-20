@@ -62,7 +62,7 @@ const routes = ($routeProvider, $httpProvider) => {
         })
         .when('/admin/categorie', {
           templateUrl: 'views/categorie/addcategorie.html',
-          controller: 'categorieController',
+          controller: 'adminCategorieController',
           controllerAs: 'vm'
         })
         .when('/service/:id', {
