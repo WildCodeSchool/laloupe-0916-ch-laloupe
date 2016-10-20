@@ -1,6 +1,12 @@
 class mainController {
 
-    constructor() {
+    constructor(btn1Service, btn2Service, btn3Service, btn4Service) {
+
+      this.btn1Service = btn1Service;
+      this.btn2Service = btn2Service;
+      this.btn3Service = btn3Service;
+      this.btn4Service = btn4Service;
+      this.load();
 
         $(".button-collapse").sideNav();
 
@@ -148,6 +154,26 @@ class mainController {
             }
         };
 
+
+    }
+
+    load() {
+        this.btn1Service.getAll().then((res) => {
+            this.btn1s = res.data;
+            this.btn1 = this.btn1s[0];
+        });
+        this.btn2Service.getAll().then((res) => {
+            this.btn2s = res.data;
+            this.btn2 = this.btn2s[0];
+        });
+        this.btn3Service.getAll().then((res) => {
+            this.btn3s = res.data;
+            this.btn3 = this.btn3s[0];
+        });
+        this.btn4Service.getAll().then((res) => {
+            this.btn4s = res.data;
+            this.btn4 = this.btn4s[0];
+        });
 
     }
 
