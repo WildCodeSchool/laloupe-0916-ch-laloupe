@@ -74,6 +74,7 @@ const routes = ($routeProvider, $httpProvider) => {
           templateUrl: 'views/admin/editor.html',
           controller: 'mainController',
           controllerAs: 'vm'
+        })
         .otherwise({
             redirectTo: '/'
         });
