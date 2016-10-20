@@ -7,6 +7,13 @@
 .cardurgencies {
     min-height: 35vh;
 }
+.cardurgencies a{
+    font-size: 1.35em;
+}
+
+#adresse {
+  padding-left: 11%;
+}
 
 
 /* First navbar */
