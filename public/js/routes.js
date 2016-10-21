@@ -7,7 +7,7 @@ const routes = ($routeProvider, $httpProvider) => {
             controllerAs: 'vm'
         })
 
-    .when('/admin/contact', {
+        .when('/admin/contact', {
             templateUrl: 'views/admin/addcontact.html',
             controller: 'contactController',
             controllerAs: 'vm'
@@ -21,10 +21,20 @@ const routes = ($routeProvider, $httpProvider) => {
             controllerAs: 'vm'
         })
         .when('/admin/apropos', {
-          templateUrl: 'views/admin/adminapropos.html',
-          controller: 'aproposController',
-          controllerAs: 'vm'
-      })
+            templateUrl: 'views/admin/adminapropos.html',
+            controller: 'aproposController',
+            controllerAs: 'vm'
+        })
+        .when('/marche', {
+            templateUrl: 'views/marches/marche.html',
+            controller: 'marcheController',
+            controllerAs: 'vm'
+        })
+        .when('/admin/marche', {
+            templateUrl: 'views/admin/adminmarche.html',
+            controller: 'marcheController',
+            controllerAs: 'vm'
+        })
         .when('/contact', {
             templateUrl: 'views/contact/contact.html',
             controller: 'contactController',
@@ -47,7 +57,7 @@ const routes = ($routeProvider, $httpProvider) => {
             controllerAs: 'vm'
         })
 
-        .when('/btn1', {
+    .when('/btn1', {
             templateUrl: 'views/addMainBtn/btn1.html',
             controller: 'btn1Controller',
             controllerAs: 'vm'
@@ -68,19 +78,19 @@ const routes = ($routeProvider, $httpProvider) => {
             controllerAs: 'vm'
         })
         .when('/admin/categorie', {
-          templateUrl: 'views/categorie/addcategorie.html',
-          controller: 'adminCategorieController',
-          controllerAs: 'vm'
+            templateUrl: 'views/categorie/addcategorie.html',
+            controller: 'adminCategorieController',
+            controllerAs: 'vm'
         })
         .when('/service/:id', {
-          templateUrl: 'views/categorie/categorie.html',
-          controller: 'categorieController',
-          controllerAs: 'vm'
+            templateUrl: 'views/categorie/categorie.html',
+            controller: 'categorieController',
+            controllerAs: 'vm'
         })
         .when('/editor', {
-          templateUrl: 'views/admin/editor.html',
-          controller: 'mainController',
-          controllerAs: 'vm'
+            templateUrl: 'views/admin/editor.html',
+            controller: 'mainController',
+            controllerAs: 'vm'
         })
         .otherwise({
             redirectTo: '/'

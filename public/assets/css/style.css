@@ -60,6 +60,11 @@ nav ul a.btn-urgence:hover {
 
 
 /* Second Navbar */
+nav .button-collapse i{
+  margin-top: 15px;
+  margin-right: 15px;
+  font-size: 4em
+}
 
 .navbar-fixed {
     top: 0;
