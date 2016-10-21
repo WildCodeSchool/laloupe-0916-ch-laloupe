@@ -1,22 +1,55 @@
 <div id="topFixed"></div>
-<div class="container ">
-    <div class="row">
-        <div class="col s12 m12">
-            <h4 class="header center-align">
-                <i class="material-icons"></i>
-                La charmille
-            </h4>
-            <div class="card horizontal">
-                <div class="card-stacked">
-                    <div class="card-content">
-                        <img class="left responsive-img" ng-src="{{ vm.categorie.photo }}" alt="photo de l'hopital"/>
-                        <h5 class="center-align">
-                            <a href="#" class="vwtitle">{{ vm.categorie.titre }}</a>
-                        </h5>
-                        <p id="cardtext" class="flow-text justify">{{ vm.categorie.texte }}</p>
+    <div class="container-fluid">
+        <div class="row categorietemplate">
+            <div class="col s12 m9">
+                <h4 class="header center-align">
+                    <i class="material-icons">&#xE548;</i>
+                    Nos services
+                </h4>
+                <div class="card horizontal">
+                    <div class="card-stacked">
+                        <div class="card-content sidenav">
+                            <img class="left responsive-img" ng-src="{{ vm.categorie.photo }}" alt="photo de l'hopital"/>
+                            <h5 class="center-align">
+                                <a href="#" class="vwtitle">{{ vm.categorie.titre }}</a>
+                            </h5>
+                            <p id="cardtext" class="flow-text justify">
+                                  {{ vm.categorie.texte }}
+                            </p>
                         </div>
                     </div>
                 </div>
             </div>
+            <div class="col s12 m2 offset-m1">
+                <div class="card-stacked" id="sidenavservices">
+                    <div class="card-content flow-text justify">
+                    <li>
+                        <a href="#!" class="section scrollspy">Médecine</a>
+                    </li>
+                    <li>
+                        <a href="#!" class="section scrollspy">Soins paliatifs</a>
+                    </li>
+                    <li>
+                        <a href="#!" class="section scrollspy">Soins de longue durée</a>
+                    </li>
+                    <li>
+                        <a href="#!" class="section scrollspy">EPHAD (maison de retraite)</a>
+                    </li>
+                    <li>
+                        <a href="#!" class="section scrollspy">
+                            Centre d'accueil de jour Alzaheimer</a>
+                    </li>
+                    <li>
+                        <a href="#!" class="section scrollspy">SSIAD (service de soins infirmiers à domicile)</a>
+                    </li>
+                    <li>
+                        <a href="#!" class="section scrollspy">Rééducation</a>
+                    </li>
+                    <li>
+                        <a href="#!" class="section scrollspy">Autres intervenants</a>
+                    </li>
+                </div>
+            </div>
         </div>
     </div>
+</div>
