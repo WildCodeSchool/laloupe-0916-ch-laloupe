@@ -20,7 +20,7 @@ class marcheController {
         });
     }
     create2() {
-        if (this.marche.length > 0) this.marche.forEach((v, i) => {
+        if(this.marche) if (this.marche.length > 0) this.marche.forEach((v, i) => {
             this.delete(v);
         });
         this.marcheService.create(this.marches).then(() => {
@@ -30,13 +30,13 @@ class marcheController {
         });
     }
 
-    update(marches) {
-        this.marcheService.update(marche._id, marches).then(() => {
+    update(marche) {
+        this.marcheService.update(marche._id, this.marches).then(() => {
             this.load();
         });
     }
 
-    delete(marches) {
+    delete(marche) {
         this.marcheService.delete(marche._id).then(() => {
             this.load();
         });
