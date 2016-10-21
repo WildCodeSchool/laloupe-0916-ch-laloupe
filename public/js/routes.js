@@ -50,6 +50,13 @@ const routes = ($routeProvider, $httpProvider) => {
         })
         .when('/actualite', {
             templateUrl: 'views/actualite/actualite.html',
+            controller: 'actualiteController',
+            controllerAs: 'vm'
+        })
+        .when('/admin/actualite', {
+            templateUrl: 'views/admin/adminactualite.html',
+            controller: 'actualiteController',
+            controllerAs: 'vm'
         })
         .when('/login', {
             templateUrl: 'views/login.html',
@@ -78,9 +85,9 @@ const routes = ($routeProvider, $httpProvider) => {
             controllerAs: 'vm'
         })
         .when('/admin/categorie', {
-            templateUrl: 'views/categorie/addcategorie.html',
-            controller: 'adminCategorieController',
-            controllerAs: 'vm'
+          templateUrl: 'views/admin/addcategorie.html',
+          controller: 'adminCategorieController',
+          controllerAs: 'vm'
         })
         .when('/service/:id', {
             templateUrl: 'views/categorie/categorie.html',
