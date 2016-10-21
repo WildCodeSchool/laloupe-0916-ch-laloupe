@@ -58,6 +58,14 @@ nav ul a.btn-urgence:hover {
     font-size: 1.3em;
 }
 
+.plus {
+  color: red;
+  font-size: 0.7em;
+}
+.ctrl {
+  color: black;
+}
+
 
 /* Second Navbar */
 nav .button-collapse i{
