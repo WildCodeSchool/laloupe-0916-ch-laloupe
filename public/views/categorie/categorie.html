@@ -6,7 +6,7 @@
                     <i class="material-icons">&#xE548;</i>
                     Nos services
                 </h4>
-                <div class="card horizontal">
+                <div class="card horizontal" id="categorieHeight">
                     <div class="card-stacked">
                         <div class="card-content sidenav">
                             <img class="left responsive-img" ng-src="{{ vm.categorie.photo }}" alt="photo de l'hopital"/>
@@ -16,6 +16,7 @@
                             <p id="cardtext" class="flow-text justify">
                                   {{ vm.categorie.texte }}
                             </p>
+                              <a href="{{ vm.categorie.lien }}" class="vwtitle" target="_blank">{{ vm.categorie.lien }}</a>
                         </div>
                     </div>
                 </div>
@@ -23,8 +24,9 @@
             <div class="col s12 m2 offset-m1">
                 <div class="card-stacked" id="sidenavservices">
                     <div class="card-content flow-text justify">
+                      <ul>
                     <li>
-                        <a href="#!" class="section scrollspy">Médecine</a>
+                        <a ng-repeat= 'vm.categoriesEnfant' href="#!" class="section scrollspy">Médecine</a>
                     </li>
                     <li>
                         <a href="#!" class="section scrollspy">Soins paliatifs</a>
@@ -48,6 +50,7 @@
                     <li>
                         <a href="#!" class="section scrollspy">Autres intervenants</a>
                     </li>
+                  </ul>
                 </div>
             </div>
         </div>
