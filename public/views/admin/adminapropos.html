@@ -4,7 +4,7 @@
         <form class="form-inline">
             <div class="form-group">
                 <p>Titre de la page <input type="text" class="form-control" placeholder="titre de la page" ng-model='vm.aproposs.titre'></p>
-                <p>Contenu<input type="text" class="form-control" placeholder="Contenu de l'à propos ..." ng-model='vm.aproposs.texte'></p>
+                <p>Contenu<textarea ui-tinymce="vm.tinymceOptions" placeholder="Contenu de l'à propos ..." ng-model='vm.aproposs.texte'></textarea></p>
             </div>
             <button ng-click='vm.create2()' class="btn btn-default" onclick="Materialize.toast('Contenu ajouté avec succès !', 4000, 'rounded')">Enregistrer</button>
         </form>

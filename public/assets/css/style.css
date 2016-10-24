@@ -346,15 +346,13 @@ width: 100%; */
     margin-bottom: 2%;
 }
 
-.categorietemplate h4 {
+.categorietemplate h4 a {
     padding-top: 2%;
-    margin-left: 20%;
-}
-
-.categorietemplate h5 a {
     color: black;
     text-decoration: underline;
+    margin-left: 10%;
 }
+
 .categorietemplate .card {
     margin-top: 2%;
 }
