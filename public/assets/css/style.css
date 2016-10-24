@@ -348,6 +348,7 @@ width: 100%; */
 
 .categorietemplate h4 {
     padding-top: 2%;
+    margin-left: 20%;
 }
 
 .categorietemplate h5 a {
@@ -372,6 +373,11 @@ width: 100%; */
     color: orange;
     border-left: solid orange 1px;
 
+}
+
+#categorieHeight {
+  min-height: 700px;
+  margin-left: 10%;
 }
 
 /* Responsive */

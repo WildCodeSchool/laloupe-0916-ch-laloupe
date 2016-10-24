@@ -7,23 +7,8 @@ class mainController {
       this.btn3Service = btn3Service;
       this.btn4Service = btn4Service;
       this.load();
-
         $(".button-collapse").sideNav();
 
-        $(window).scroll(function() {
-            if ($(window).scrollTop() > $('#scrollspy').height()) {
-                $('#push').addClass('navbar-fixed');
-                $('#topFixed').css({
-                    'margin-top': '100px'
-                });
-            }
-            if ($(window).scrollTop() < $('#scrollspy').height()) {
-                $('#push').removeClass('navbar-fixed');
-                $('#topFixed').css({
-                    'margin-top': '0'
-                });
-            }
-        });
 
         $('.slider').slider({
             full_width: true,
