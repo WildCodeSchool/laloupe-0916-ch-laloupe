@@ -1,9 +1,19 @@
 class adminCategorieController {
 
-    constructor(categorieService) {
+    constructor(categorieService, $routeParams) {
+      this.$routeParams = $routeParams;
 
       this.categorieService = categorieService;
+      this.load();
 
+
+
+        }
+
+        load() {
+            this.categorieService.getAll().then((res) => {
+                this.categories = res.data;
+            });
         }
 
 
