@@ -97,14 +97,23 @@ nav .button-collapse i{
     background-color: white;
 }
 
+#menuTitle {
+    position: absolute;
+    font-size: 2em;
+    padding-left: 10px;
+    left: 160px;
+    right: 0px;
+    width: 500px;
+}
+
 .darklink {
     color: black;
 }
 
-.nav-wrapper span {
+/* .nav-wrapper span {
     position: absolute;
     padding-left: 10px;
-}
+} */
 
 #logo {
     padding-left: 20px;
@@ -129,10 +138,11 @@ nav .button-collapse i{
 
 /* title and paragraph */
 
-h1 {
+#mainTitle{
     font-size: 6em;
     color: white;
     text-shadow: 0 1px 0 #ccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaa, 0 6px 1px rgba(0, 0, 0, .1), 0 0 5px rgba(0, 0, 0, .1), 0 1px 3px rgba(0, 0, 0, .3), 0 3px 5px rgba(0, 0, 0, .2), 0 5px 10px rgba(0, 0, 0, .25), 0 10px 10px rgba(0, 0, 0, .2), 0 20px 20px rgba(0, 0, 0, .15);
+    padding-top : 2%;
 }
 
 p {
@@ -146,14 +156,22 @@ p {
 
 /* Slider */
 
+.row-slider {
+   height: 85vh;
+ }
+
+ .slider {
+   height: 100% !important;
+ }
+ .slides {
+   height: 90% !important;
+ }
+
 .group-btn {
-    /* position: absolute; */
+    position: absolute;
     z-index: 20;
-    float: left;
-    padding-left: 8.8%;
-    padding-top: 12%;
-    /* top: 70%
-width: 100%; */
+    top: 70%;
+    width: 100%;
 }
 
 .sliderbtn {
@@ -203,12 +221,11 @@ width: 100%; */
     font-size: 4em;
 }
 
-.title {
+.titlepres {
     position: absolute;
     z-index: 10;
-    width: 90%;
-    top: 15%;
-    left: 5%;
+    width: 100%;
+    top: 5%;
 }
 
 
@@ -315,6 +332,9 @@ width: 100%; */
 #bottomNavbar {
     background-color: #3e3e3e;
 }
+#adresseResponsive {
+  margin-left: 2%;
+}
 
 
 /* Global view */
@@ -383,248 +403,265 @@ width: 100%; */
 }
 
 /* Responsive */
-
-@media screen and (max-width: 1160px) {
-    .hideaccueilespecedebanane {
-        display: none!important;
-    }
+@media screen and (min-width: 994px) and (max-width: 1300px) {
+#logo {
+    padding-left: 10px;
 }
-
-@media screen(min-width: 1023px) {
-    h1 {
-        font-size: 6em;
-    }
-    .btnresponsive {
-        max-height: 14vh;
-    }
-    .group-btn .btn span {
-        font-size: 4em;
-    }
-    .group-btn .btn i {
-        font-size: 4.5em;
-    }
-    @media screen and (max-width: 990px) {
-        h1 {
-            font-size: 5em;
-        }
-        .btnresponsive {
-            max-height: 13vh;
-        }
-        .group-btn .btn span {
-            font-size: 3.5em;
-        }
-        .group-btn .btn i {
-            font-size: 4.5em;
-        }
-    }
-    @media screen and (max-width: 770px) {
-        h1 {
-            font-size: 4.5em;
-        }
-        .btnresponsive {
-            max-height: 11vh;
-        }
-        .group-btn .btn span {
-            font-size: 3em;
-        }
-        .group-btn .btn i {
-            font-size: 4.5em;
-        }
-    }
+#menuTitle {
+    width: 25%;
+    line-height: 40px;
+    padding-top: 10px;
+    left: 110px;
 }
-
-@media screen and (max-width: 600px) {
-    h1 {
-        font-size: 4em;
-    }
-    .btnresponsive {
-        max-height: 9vh;
-    }
-    .group-btn .btn span {
-        font-size: 2em;
-    }
-    .group-btn .btn i {
-        font-size: 4em;
-    }
-    #bottomNavbar {
-        height: 80px;
-        line-height: 40px;
-    }
-    #bottomBar {
-        display: flex;
-        flex-direction: column;
-        height: 100px;
-    }
-    #bottomBar .right {
-        width: 100%;
-    }
+#carouselh2 {
+  width: 90%;
 }
-
-@media screen and (max-width: 500px) {
-    nav {
-        height: 80px;
-        line-height: 0px;
-    }
-    #logo img {
-        width: 65%;
-        height: 90%;
-    }
-    .phone a #logo span {
-        font-size: 0.8em;
-    }
-    nav i.material-icons {
-        height: 40px;
-        line-height: normal;
-    }
-    .nav-wrapper span {
-        position: absolute;
-        font-size: 0.7em;
-        width: 200px;
-        padding: 30px 0 0 10px;
-        line-height: normal;
-        white-space: normal;
-    }
-    #scrollspy {
-        display: flex;
-        flex-direction: column;
-        height: 100px;
-    }
-    #scrollspy .right {
-        width: 100%;
-    }
-    /* .btn {
-height: 100px;
-line-height: inherit;
 }
-.group-btn .btn i {
-font-size: 4em;
-}
-.group-btn .btn span {
-margin-top: 35px;
-margin-left: 10px;
-font-size: 1.5em;
-} */
-    h1 {
-        font-size: 2.5em;
-    }
-    .btnresponsive {
-        max-height: 7.5vh;
-    }
-    .group-btn .btn span {
-        font-size: 1em;
-    }
-    .iconButton {
+@media screen and (min-width: 768px) and (max-width: 993px) {
+    .modal-trigger1 {
         display: none;
     }
-    #stats {
-        width: 90vw;
-        height: 35vh;
-    }
-    #stats h1 {
-        font-size: 1.7em;
-    }
-    #stats p {
-        font-size: 1.0em;
-    }
-    #stats i {
-        font-size: 4rem;
-    }
-    #stats a {
-        top: 90px;
-    }
+#mainTitle {
+    font-size: 4em;
 }
-
+.group-btn {
+    top: 55%;
+}
+.cont-btn, .sliderbtn {
+    margin-top: 2%;
+    height: 130px;
+}
+#carouselh2 {
+  width: 90%;
+}
+.carousel-item p {
+  font-size : 1.5em;
+}
+#adresseResponsive {
+  width : 60%;
+  font-size: 1.2em;
+  margin-left: 2%;
+}
+#contactResponsive {
+  position: absolute;
+  font-size: 1.5em;
+  right: 15%;
+}
+#marcheResponsive{
+  position: absolute;
+  font-size: 1.5em;
+  right: 2%;
+}
+#bottomFooterReponsive {
+  width: 90%;
+  padding-left: 10%;
+}
+}
+@media screen and (min-width: 600px) and (max-width: 767px) {
+    .modal-trigger1 {
+        display: none;
+    }
+#mainTitle {
+    font-size: 4em;
+}
+.group-btn {
+    top: 52%;
+}
+.cont-btn, .sliderbtn {
+    margin-top: 2%;
+    height: 145px;
+}
+#menuTitle {
+    font-size : 1.8em;
+}
+#carouselh2 {
+  width: 90%;
+}
+.carousel-item p {
+  font-size : 1.2em;
+}
+.carousel-item i {
+  font-size : 3.2em;
+}
+#adresseResponsive {
+  width : 60%;
+  font-size: 1em;
+  margin-left: 2%;
+}
+#contactResponsive {
+  position: absolute;
+  font-size: 1.3em;
+  right: 15%;
+}
+#marcheResponsive{
+  position: absolute;
+  font-size: 1.3em;
+  right: 3%;
+}
+#bottomFooterReponsive {
+  width: 90%;
+  padding-left: 10%;
+}
+}
+@media screen and (min-width: 401px) and (max-width: 599px) {
+    .modal-trigger1 {
+        display: none;
+    }
+#scrollspy {
+    display: flex;
+    flex-direction: column;
+    height: 100px;
+}
+#scrollspy .right {
+    width: 100%;
+}
+#menuTitle {
+    line-height: 30px;
+    width: 45%;
+    font-size : 1.8em;
+    padding-top: 2%;
+}
+.row-slider, .slider {
+    height: 60vh !important;
+}
+#mainTitle {
+    font-size: 4em;
+}
+.group-btn {
+    position: relative;
+}
+.cont-btn, .sliderbtn {
+    margin-top: 2%;
+    height: 145px;
+}
+#phoneResponsive {
+    display:none;
+}
+.btn-urgence {
+  position: absolute;
+  right: 30%;
+  top: 0;
+}
+.presseResponsive {
+  position: absolute;
+  right: 5%;
+  top: 0;
+}
+#carouselh2 {
+  width: 90%;
+  padding-top: 10%;
+  font-size: 3em;
+}
+.carousel-item p {
+  font-size : 1em;
+}
+.carousel-item i {
+  font-size : 2.8em;
+}
+#adresseResponsive {
+  width : 60%;
+  font-size: 0.8em;
+  margin-left: 4%;
+}
+#contactResponsive {
+  position: absolute;
+  font-size: 1.1em;
+  right: 17%;
+}
+#marcheResponsive{
+  position: absolute;
+  font-size: 1.1em;
+  right: 1.5%;
+}
+#bottomFooterReponsive {
+  width: 90%;
+  padding-left: 10%;
+}
+}
 @media screen and (max-width: 400px) {
-    #push {
-        height: 80px;
-    }
-    #logo img {
-        width: 45%;
-        height: 70%;
-    }
-    .nav-wrapper span {
-        position: absolute;
-        font-size: 0.7em;
-        width: 180px;
-        padding: 20px 0 0 10px;
-        line-height: normal;
-        white-space: normal;
-    }
-    .title {
-        margin-top: 0;
-    }
-    /* .group-btn {
-margin-top: 5%;
-} */
-    .btnresponsive {
-        max-height: 9vh;
-    }
-    .iconButton {
+    .modal-trigger1 {
         display: none;
     }
-    .group-btn .btn span {
-        font-size: 1em;
-    }
-    h1 {
-        font-size: 2em;
-    }
-    #testdropdown {
-        width: 20%;
-        height: 20%;
-        text-align: center;
-        line-height: 90px;
-    }
-    #rdvslider {
-        height: 100vh;
-        width: 100vh;
-        position: fixed;
-        top: 0;
-        left: 0;
-        display: none;
-    }
+#scrollspy {
+    display: flex;
+    flex-direction: column;
+    height: 100px;
 }
-
-.secondary-content {
-    font-weight: bold;
-    text-transform: uppercase;
+#scrollspy .right {
+    width: 100%;
 }
-
-blockquote {
-    font-size: 1.5em;
-    height: 5vh;
-    font-weight: bold;
-    text-transform: uppercase;
+#logo {
+    padding-left: 30px;
 }
-
-kbd {
-    background-color: #f7f7f7;
-    border: 1px solid #ccc;
-    border-radius: 3px;
-    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2), 0 0 0 2px #fff inset;
-    color: #333;
-    display: inline-block;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 1.5em;
-    line-height: 1.4;
-    margin: 0 0.1em;
-    padding: 0.1em 0.6em;
-    text-shadow: 0 1px 0 #fff;
+#logo img {
+    width: 80px;
+    height: 80px;
 }
-
-.card-action {
-    margin-left: 38%;
+#menuTitle {
+    line-height: 30px;
+    width: 40%;
+    font-size : 1.4em;
+    padding-top: 2%;
+    left: 130px;
 }
-
 .list {
     margin-left: 10%;
+  }
+.row-slider, .slider {
+    height: 60vh !important;
 }
-
-.box2 {
-    width: 70%;
-    margin-left: 15%;
+#mainTitle {
+    font-size: 3em;
 }
+.group-btn {
+    position: relative;
+}
+.cont-btn, .sliderbtn {
+    margin-top: 2%;
+    height: 145px;
+}
+#phoneResponsive {
+    display:none;
+}
+.btn-urgence {
+  position: absolute;
+  right: 30%;
+  top: 0;
+}
+.presseResponsive {
+  position: absolute;
+  right: 5%;
+  top: 0;
+}
+#carouselh2 {
+  width: 90%;
+  padding-top: 10%;
+  font-size: 1.8em;
+}
+.carousel-item p {
+  font-size : 0.7em;
+}
+.carousel-item i {
+  font-size : 2.5em;
+}
+#adresseResponsive {
+  width : 50%;
+  font-size: 0.6em;
+  margin-left: 2%;
+}
+#contactResponsive {
+  position: absolute;
+  font-size: 0.8em;
+  right: 20%;
+}
+#marcheResponsive{
+  position: absolute;
 
-.box1 {
-    width: 70%;
-    margin-left: 15%;
+  font-size: 0.8em;
+  right: 3%;
+}
+#bottomFooterReponsive {
+  width: 90%;
+  padding-left: 10%;
+}
 }
