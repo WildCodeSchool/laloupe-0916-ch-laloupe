@@ -2,103 +2,100 @@ const routes = ($routeProvider, $httpProvider) => {
 
     $routeProvider
         .when('/', {
-            templateUrl: 'views/main.html',
-            controller: 'mainController',
-            controllerAs: 'vm'
-        })
+          templateUrl: 'views/main.html',
+          controller: 'mainController',
+          controllerAs: 'vm'
+      })
+      .when('/admin/contact', {
+          templateUrl: 'views/admin/addcontact.html',
+          controller: 'admin/contactController',
+          controllerAs: 'vm'
+      })
+      .when('/admin/actualite', {
+          templateUrl: 'views/admin/adminactualite.html',
+          controller: 'admin/actualiteController',
+          controllerAs: 'vm'
+      })
+      .when('/admin/stat', {
+          templateUrl: 'views/admin/stat.html',
+          controller: 'admin/statController',
+          controllerAs: 'vm'
+      })
+      .when('/admin/praticien', {
+          templateUrl: 'views/admin/adddoctor.html',
+          controller: 'admin/annuaireController',
+          controllerAs: 'vm'
+      })
+      .when('/apropos', {
+          templateUrl: 'views/apropos/apropos.html',
+          controller: 'aproposController',
+          controllerAs: 'vm'
+      })
+      .when('/admin/apropos', {
+          templateUrl: 'views/admin/adminapropos.html',
+          controller: 'admin/aproposController',
+          controllerAs: 'vm'
+      })
+      .when('/admin/categorie', {
+          templateUrl: 'views/admin/addcategorie.html',
+          controller: 'admin/categorieController',
+          controllerAs: 'vm'
+      })
+      .when('/service/:id', {
+          templateUrl: 'views/categorie/categorie.html',
+          controller: 'categorieController',
+          controllerAs: 'vm'
+      })
+      .when('/contact', {
+          templateUrl: 'views/contact/contact.html',
+          controller: 'contactController',
+          controllerAs: 'vm'
+      })
+      .when('/actualite', {
+          templateUrl: 'views/actualite/actualite.html',
+          controller: 'actualiteController',
+          controllerAs: 'vm'
+      })
 
-        .when('/admin/contact', {
-            templateUrl: 'views/admin/addcontact.html',
-            controller: 'contactController',
-            controllerAs: 'vm'
-        })
-        .when('/legals', {
-            templateUrl: 'views/mentions/legals.html',
-            controller: 'aproposController',
-            controllerAs: 'vm'
-        })
-        .when('/apropos', {
-            templateUrl: 'views/apropos/apropos.html',
-            controller: 'aproposController',
-            controllerAs: 'vm'
-        })
-        .when('/admin/apropos', {
-            templateUrl: 'views/admin/adminapropos.html',
-            controller: 'aproposController',
+      .when('/legals', {
+          templateUrl: 'views/mentions/legals.html',
+          controller: 'aproposController',
+          controllerAs: 'vm'
+      })
+      .when('/login', {
+          templateUrl: 'views/login.html',
+          controller: 'loginController',
+          controllerAs: 'vm'
+      })
+      .when('/btn1', {
+          templateUrl: 'views/addMainBtn/btn1.html',
+          controller: 'admin/btn1Controller',
+          controllerAs: 'vm'
+      })
+      .when('/btn2', {
+          templateUrl: 'views/addMainBtn/btn2.html',
+          controller: 'admin/btn2Controller',
+          controllerAs: 'vm'
+      })
+      .when('/btn3', {
+          templateUrl: 'views/addMainBtn/btn3.html',
+          controller: 'admin/btn3Controller',
+          controllerAs: 'vm'
+      })
+      .when('/btn4', {
+          templateUrl: 'views/addMainBtn/btn4.html',
+          controller: 'admin/btn4Controller',
+          controllerAs: 'vm'
+      })
+
+        .when('/admin/marche', {
+            templateUrl: 'views/admin/adminmarche.html',
+            controller: 'admin/marcheController',
             controllerAs: 'vm'
         })
         .when('/marche', {
             templateUrl: 'views/marches/marche.html',
             controller: 'marcheController',
-            controllerAs: 'vm'
-        })
-        .when('/admin/marche', {
-            templateUrl: 'views/admin/adminmarche.html',
-            controller: 'marcheController',
-            controllerAs: 'vm'
-        })
-        .when('/contact', {
-            templateUrl: 'views/contact/contact.html',
-            controller: 'contactController',
-            controllerAs: 'vm'
-        })
-        .when('/plandusite', {
-            templateUrl: 'views/plandusite.html',
-            controller: 'contactController',
-            controllerAs: 'vm'
-        })
-        .when('/ehpad', {
-            templateUrl: 'views/category/ehpad.html',
-        })
-        .when('/actualite', {
-            templateUrl: 'views/actualite/actualite.html',
-            controller: 'actualiteController',
-            controllerAs: 'vm'
-        })
-        .when('/admin/actualite', {
-            templateUrl: 'views/admin/adminactualite.html',
-            controller: 'actualiteController',
-            controllerAs: 'vm'
-        })
-        .when('/login', {
-            templateUrl: 'views/login.html',
-            controller: 'loginController',
-            controllerAs: 'vm'
-        })
-
-    .when('/btn1', {
-            templateUrl: 'views/addMainBtn/btn1.html',
-            controller: 'btn1Controller',
-            controllerAs: 'vm'
-        })
-        .when('/btn2', {
-            templateUrl: 'views/addMainBtn/btn2.html',
-            controller: 'btn2Controller',
-            controllerAs: 'vm'
-        })
-        .when('/btn3', {
-            templateUrl: 'views/addMainBtn/btn3.html',
-            controller: 'btn3Controller',
-            controllerAs: 'vm'
-        })
-        .when('/btn4', {
-            templateUrl: 'views/addMainBtn/btn4.html',
-            controller: 'btn4Controller',
-            controllerAs: 'vm'
-        })
-        .when('/admin/categorie', {
-          templateUrl: 'views/admin/addcategorie.html',
-          controller: 'adminCategorieController',
-          controllerAs: 'vm'
-        })
-        .when('/service/:id', {
-            templateUrl: 'views/categorie/categorie.html',
-            controller: 'categorieController',
-            controllerAs: 'vm'
-        })
-        .when('/editor', {
-            templateUrl: 'views/admin/editor.html',
-            controller: 'mainController',
             controllerAs: 'vm'
         })
         .otherwise({

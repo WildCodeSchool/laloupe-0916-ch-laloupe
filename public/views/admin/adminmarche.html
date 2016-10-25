@@ -3,10 +3,10 @@
         <h2>Ajouter un marchés </h2>
         <form class="form-inline">
             <div class="form-group">
-                <p>titre de la page<input type="text" class="form-control" placeholder="titre de la page" ng-model='vm.marches.titre'></p>
-                <p>Contenu<textarea ui-tinymce="vm.tinymceOptions" placeholder="Contenu de marchés" ng-model='vm.marches.texte'></textarea></p>
+                <p>titre de la page<input type="text" class="form-control" placeholder="titre de la page" ng-model='vm.marche.titre'></p>
+                <p>Contenu<textarea ui-tinymce="vm.tinymceOptions" placeholder="Contenu de marchés" ng-model='vm.marche.texte'></textarea></p>
             </div>
-            <button ng-click='vm.create2()' class="btn btn-default" onclick="Materialize.toast('Contenu ajouté avec succès !', 4000, 'rounded')">Enregistrer</button>
+            <button ng-click='vm.create()' class="btn btn-default" onclick="Materialize.toast('Contenu ajouté avec succès !', 4000, 'rounded')">Enregistrer</button>
         </form>
 
     </div>

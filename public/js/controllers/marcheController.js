@@ -13,33 +13,11 @@ class marcheController {
 
         });
     }
-    load() {
-        this.marcheService.getAll().then((res) => {
-            this.marche = res.data;
-            this.marches = res.data[0];
-        });
-    }
-    create2() {
-        if(this.marche) if (this.marche.length > 0) this.marche.forEach((v, i) => {
-            this.delete(v);
-        });
-        this.marcheService.create(this.marches).then(() => {
 
-            this.marches = {};
-            this.load();
-        });
+    load(){
+      this.marcheService.getAll().then((res) => {
+        this.marche = res.data;
+        this.marches = res.data[0];
+      });
     }
-
-    update(marche) {
-        this.marcheService.update(marche._id, this.marches).then(() => {
-            this.load();
-        });
-    }
-
-    delete(marche) {
-        this.marcheService.delete(marche._id).then(() => {
-            this.load();
-        });
-    }
-
-}
+  }
