@@ -1,34 +1,9 @@
 <div id="topFixed"></div>
-<div class="slider" id="scrollslider">
-    <div class="caption center-align title">
+<div class= "row row-slider">
+<div class="slider col s12" id="scrollslider">
+    <div class="caption center-align titlepres">
         <div class="message">
-            <h1>Bienvenue<br>au Centre Hospitalier de La Loupe</h1>
-        </div>
-        <div class="row col l3 m12 group-btn">
-            <div class="cont-btn col l3 m6 s12">
-                <a class="btn consult cont-btn-green sliderbtn waves-effect btnresponsive" ng-click='vm.toggleConsultation()'>
-                    <i class="material-icons iconButton">insert_invitation</i><br>
-                    <span>J'ai un rendez-vous</span>
-                </a>
-            </div>
-            <div class="cont-btn col l3 m6 s12">
-                <a class="btn cont-btn-violet sliderbtn waves-effect btnresponsive" ng-click='vm.toggleHospitalise()'>
-                    <i class="material-icons iconButton">local_hospital</i><br>
-                    <span>Je vais être hospitalisé</span>
-                </a>
-            </div>
-            <div class="cont-btn col l3 m6 s12">
-                <a class="btn cont-btn-orange sliderbtn waves-effect btnresponsive" ng-click='vm.toggleEhpad()'>
-                    <i class="material-icons iconButton">home</i><br>
-                    <span>Je vais entrer en EHPAD</span>
-                </a>
-            </div>
-            <div class="cont-btn col l3 m6 s12">
-                <a class="btn cont-btn-blue sliderbtn waves-effect btnresponsive" ng-click='vm.togglePatient()'>
-                    <i class="material-icons iconButton">transfer_within_a_station</i><br>
-                    <span>Je vais voir un patient</span>
-                </a>
-            </div>
+            <h1 id= "mainTitle">Bienvenue au Centre Hospitalier de <br>La Loupe</h1>
         </div>
     </div>
     <ul class="slides">
@@ -45,6 +20,33 @@
             <!-- random image -->
         </li>
     </ul>
+</div>
+</div>
+<div class="row col l3 m12 group-btn">
+    <div class="cont-btn col l3 m6 s12">
+        <a class="btn consult cont-btn-green sliderbtn waves-effect btnresponsive" ng-click='vm.toggleConsultation()'>
+            <i class="material-icons iconButton">insert_invitation</i><br>
+            <span>J'ai un rendez-vous</span>
+        </a>
+    </div>
+    <div class="cont-btn col l3 m6 s12">
+        <a class="btn cont-btn-violet sliderbtn waves-effect btnresponsive" ng-click='vm.toggleHospitalise()'>
+            <i class="material-icons iconButton">local_hospital</i><br>
+            <span>Je vais être hospitalisé</span>
+        </a>
+    </div>
+    <div class="cont-btn col l3 m6 s12">
+        <a class="btn cont-btn-orange sliderbtn waves-effect btnresponsive" ng-click='vm.toggleEhpad()'>
+            <i class="material-icons iconButton">home</i><br>
+            <span>Je vais entrer en EHPAD</span>
+        </a>
+    </div>
+    <div class="cont-btn col l3 m6 s12">
+        <a class="btn cont-btn-blue sliderbtn waves-effect btnresponsive" ng-click='vm.togglePatient()'>
+            <i class="material-icons iconButton">transfer_within_a_station</i><br>
+            <span>Je vais voir un patient</span>
+        </a>
+    </div>
 </div>
 
   <!--div ng-show "j'ai un rendez-vous"-->
@@ -223,7 +225,7 @@
 
 <div class="container white-text center-align" id="stats">
     <div id="slider2" class="carousel textevue">
-        <h2>Le Centre Hospitalier en quelques chiffres</h2>
+        <h2 id="carouselh2">Le Centre Hospitalier en quelques chiffres</h2>
         <a class="carousel-item" href="#one!">
             <i class="large material-icons white-text">tag_faces</i>
             <p class="white-text textevue">200 professionnels disponibles</p>
