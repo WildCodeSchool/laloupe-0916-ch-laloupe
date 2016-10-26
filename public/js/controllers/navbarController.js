@@ -31,6 +31,11 @@ class navbarController {
         this.isToggled = false;
         this.toggleEmergencies = function() {
             this.isToggled = !this.isToggled;
+            if (this.isToggled == true){
+              $(".group-btn").hide();
+            } else {
+              $(".group-btn").show();
+            }
         };
     }
 
