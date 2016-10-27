@@ -1,11 +1,11 @@
-class adminaproposController {
+class aproposController {
 
     constructor(aproposService) {
         this.aproposService = aproposService;
 
         this.tinymceOptions = {
-            plugins: 'link image code',
-            toolbar: 'undo redo | bold italic | alignleft aligncenter alignright | code'
+            toolbar: "forecolor | insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image",
+            plugins: 'advlist autolink link image lists charmap autoresize textcolor'
         };
         this.load();
     }
@@ -15,7 +15,7 @@ class adminaproposController {
             this.aproposs = res.data[0];
         });
     }
-    create2() {
+    create() {
         if (this.apropos.length > 0) this.apropos.forEach((v, i) => {
             this.delete(v);
         });
