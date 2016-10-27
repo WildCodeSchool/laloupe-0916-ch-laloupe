@@ -339,6 +339,10 @@ p {
 
 /* Global view */
 
+.tilesidenavbar{
+  text-decoration: underline;
+}
+
 .description img {
     margin: 0 10px 0 10px;
 }
@@ -357,6 +361,7 @@ p {
 
 /* Navbar view services */
 
+
 .sidenav img {
 
     padding-right: 2%;
@@ -374,7 +379,6 @@ p {
     padding-top: 2%;
     color: black;
     text-decoration: underline;
-    margin-left: 10%;
 }
 
 .categorietemplate .card {
@@ -383,11 +387,10 @@ p {
 #sidenavservices {
     margin-top: 6%;
     margin-right: 2%;
-    position: fixed;
     list-style-type: none;
 }
 #sidenavservices a {
-    font-size: 0.6em;
+    font-size: 1em;
     color: black;
 
 }
@@ -581,6 +584,8 @@ p {
     .modal-trigger1 {
         display: none;
     }
+
+
 #scrollspy {
     display: flex;
     flex-direction: column;
