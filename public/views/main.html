@@ -54,26 +54,26 @@
     <div ng-show='vm.isLoad'>
         <div class="row consults">
             <div class="blocconsultation">
-                <div class="col s12 m4 l4">
+                <div class="col s12 m4 l4" ng-show="vm.btn1.title1.length > 0 || vm.btn1.texte1.length > 0">
                     <div class="card cardconsults green">
                         <div class="card-content white-text">
-                            <h6 class="black-text flow-text">Spécialités</h6>
+                            <h6 class="black-text flow-text">{{vm.btn1.title1}}</h6>
                             <p class="rdv1" ng-bind-html='vm.btn1.texte1'></p>
                         </div>
                     </div>
                 </div>
-                <div class="col s12 m4 l4">
+                <div class="col s12 m4 l4"  ng-show="vm.btn1.title2.length > 0 || vm.btn1.texte2.length > 0">
                     <div class="card cardconsults green">
                         <div class="card-content white-text">
-                            <h6 class="black-text flow-text">Contact</h6>
+                            <h6 class="black-text flow-text">{{vm.btn1.title2}}</h6>
                             <p class="rdv2" ng-bind-html='vm.btn1.texte2'></p>
                         </div>
                     </div>
                 </div>
-                <div class="col s12 m4 l4">
+                <div class="col s12 m4 l4"ng-show="vm.btn1.title3.length > 0 || vm.btn1.texte3.length > 0" >
                     <div class="card cardconsults green">
                         <div class="card-content white-text">
-                            <h6 class="black-text flow-text">Documents à apporter</h6>
+                            <h6 class="black-text flow-text">{{vm.btn1.title3}}</h6>
                             <p class="rdv3" ng-bind-html='vm.btn1.texte3'></p>
                         </div>
                     </div>
@@ -88,26 +88,26 @@
     <div ng-show='vm.isLoad1'>
         <div class="row hospitalise">
             <div class="blochospitalise">
-                <div class="col s12 m4 l4">
+                <div class="col s12 m4 l4"ng-show="vm.btn2.title1.length > 0 || vm.btn2.texte1.length > 0">
                     <div class="card cardconsults purple lighten-1">
                         <div class="card-content text white-text">
-                            <h6 class="black-text flow-text">Votre entrée</h6>
+                            <h6 class="black-text flow-text">{{vm.btn2.title1}}</h6>
                             <p class="hosp1" ng-bind-html='vm.btn2.texte1'></p>
                         </div>
                     </div>
                 </div>
-                <div class="col s12 m4 l4">
+                <div class="col s12 m4 l4"ng-show="vm.btn2.title2.length > 0 || vm.btn2.texte2.length > 0">
                     <div class="card cardconsults purple lighten-1">
                         <div class="card-content text white-text">
-                            <h6 class="black-text flow-text">Votre séjour</h6>
+                            <h6 class="black-text flow-text">{{vm.btn2.title2}}</h6>
                             <p class="hosp2" ng-bind-html='vm.btn2.texte2'></p>
                         </div>
                     </div>
                 </div>
-                <div class="col s12 m4 l4">
+                <div class="col s12 m4 l4"ng-show="vm.btn2.title3.length > 0 || vm.btn2.texte3.length > 0">
                     <div class="card cardconsults purple lighten-1">
                         <div class="card-content text white-text">
-                            <h6 class="black-text flow-text">Votre sortie</h6>
+                            <h6 class="black-text flow-text">{{vm.btn2.title3}}</h6>
                             <p class="hosp3" ng-bind-html='vm.btn2.texte1'></p>
                         </div>
                     </div>
@@ -123,34 +123,34 @@
     <div ng-show='vm.isLoad2'>
         <div class="row ehpad">
             <div class="blocehpad">
-                <div class="col s12 m6 l3">
+                <div class="col s12 m6 l3" ng-show="vm.btn3.title1.length > 0 || vm.btn3.texte1.length > 0">
                     <div class="card cardconsults orange lighten-1">
                         <div class="card-content text white-text">
-                            <h6 class="black-text flow-text">Votre entrée</h6>
+                            <h6 class="black-text flow-text">{{vm.btn3.title1}}</h6>
                             <p class="ehpad1" ng-bind-html='vm.btn3.texte1'></p>
                         </div>
                     </div>
                 </div>
-                <div class="col s12 m6 l3">
+                <div class="col s12 m6 l3"ng-show="vm.btn3.title2.length > 0 || vm.btn3.texte2.length > 0">
                     <div class="card cardconsults orange lighten-1">
                         <div class="card-content text white-text">
-                            <h6 class="black-text flow-text">Votre sortie</h6>
+                            <h6 class="black-text flow-text">{{vm.btn3.title2}}</h6>
                             <p class="ehpad2" ng-bind-html='vm.btn3.texte2'></p>
                         </div>
                     </div>
                 </div>
-                <div class="col s12 m6 l3">
+                <div class="col s12 m6 l3"ng-show="vm.btn3.title3.length > 0 || vm.btn3.texte3.length > 0">
                     <div class="card cardconsults orange lighten-1">
                         <div class="card-content text white-text">
-                            <h6 class="black-text flow-text">Animations</h6>
+                            <h6 class="black-text flow-text">{{vm.btn3.title3}}</h6>
                             <p class="ehpad3" ng-bind-html='vm.btn3.texte3'></p>
                         </div>
                     </div>
                 </div>
-                <div class="col s12 m6 l3">
+                <div class="col s12 m6 l3"ng-show="vm.btn3.title4.length > 0 || vm.btn3.texte4.length > 0">
                     <div class="card cardconsults orange lighten-1">
                         <div class="card-content text white-text">
-                            <h6 class="black-text flow-text">À télécharger</h6>
+                            <h6 class="black-text flow-text">{{vm.btn3.title4}}</h6>
                             <p class="ehpad4" ng-bind-html='vm.btn3.texte4'></p>
                         </div>
                     </div>
@@ -165,26 +165,26 @@
     <div ng-show='vm.isLoad3'>
         <div class="row patient">
             <div class="blocpatient">
-                <div class="col s12 m4 l4">
+                <div class="col s12 m4 l4"ng-show="vm.btn4.title1.length > 0 || vm.btn4.texte1.length > 0">
                     <div class="card cardconsults teal lighten-1">
                         <div class="card-content white-text">
-                            <h6 class="black-text flow-text">Mes visites</h6>
+                            <h6 class="black-text flow-text">{{vm.btn4.title1}}</h6>
                               <p class="visiter1" ng-bind-html='vm.btn4.texte1'></p>
                         </div>
                     </div>
                 </div>
-                <div class="col s12 m4 l4">
+                <div class="col s12 m4 l4"ng-show="vm.btn4.title2.length > 0 || vm.btn4.texte2.length > 0">
                     <div class="card cardconsults teal lighten-1">
                         <div class="card-content white-text">
-                            <h6 class="black-text flow-text"> Le parking</h6>
+                            <h6 class="black-text flow-text">{{vm.btn4.title2}}</h6>
                             <p class="visiter2" ng-bind-html='vm.btn4.texte2'></p>
                         </div>
                     </div>
                 </div>
-                <div class="col s12 m4 l4">
+                <div class="col s12 m4 l4"ng-show="vm.btn4.title3.length > 0 || vm.btn4.texte3.length > 0">
                     <div class="card cardconsults teal lighten-1">
                         <div class="card-content white-text">
-                            <h6 class="black-text flow-text"> Le parking</h6>
+                            <h6 class="black-text flow-text">{{vm.btn4.title3}}</h6>
                             <p class="visiter3" ng-bind-html='vm.btn4.texte3'></p>
                         </div>
                     </div>
