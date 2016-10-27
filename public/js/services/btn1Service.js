@@ -5,7 +5,7 @@ class btn1Service {
     }
 
     create(data) {
-        return this.$http.post('/api/btn1s', data )
+        return this.$http.post('/api/btn1s', data)
     }
 
     getAll() {
@@ -18,9 +18,12 @@ class btn1Service {
 
     update(id, data) {
         return this.$http.put('/api/btn1s/' + id, {
-          texte1: data.texte1,
-          texte2: data.texte2,
-          texte3: data.texte3
+            title1: data.title1,
+            title2: data.title2,
+            title3: data.title3,
+            texte1: data.texte1,
+            texte2: data.texte2,
+            texte3: data.texte3
         })
     }
 
