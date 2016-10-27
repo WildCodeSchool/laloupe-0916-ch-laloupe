@@ -352,6 +352,13 @@ p {
 
 .tilesidenavbar {
     text-decoration: underline;
+
+#imgCatCenter {
+  height : 500px;
+}
+
+.tilesidenavbar{
+  text-decoration: underline;
 }
 
 .description img {
