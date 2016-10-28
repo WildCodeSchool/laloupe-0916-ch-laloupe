@@ -1,18 +1,18 @@
 class mainController {
 
-    constructor(btn1Service, btn2Service, btn3Service, btn4Service) {
+    constructor(rendezvousService, hospitaliseService, ehpadService, visiteService, statService) {
+        this.rendezvousService = rendezvousService;
+        this.hospitaliseService = hospitaliseService;
+        this.ehpadService = ehpadService;
+        this.visiteService = visiteService;
+            this.statService = statService;
+        this.load();
 
-      this.btn1Service = btn1Service;
-      this.btn2Service = btn2Service;
-      this.btn3Service = btn3Service;
-      this.btn4Service = btn4Service;
-      this.load();
         $(".button-collapse").sideNav();
-
 
         $('.slider').slider({
             full_width: true,
-            //height: ($(window).height() / 100 * 80)
+            // height: ($(window).height() / 100 * 80)
         });
 
 
@@ -139,56 +139,49 @@ class mainController {
             }
         };
 
-
     }
-
     load() {
-        this.btn1Service.getAll().then((res) => {
+        this.statService.getAll().then((res) => {
+            this.stat = res.data;
+            this.stats = res.data[0];
+        });
+        this.rendezvousService.getAll().then((res) => {
             this.btn1s = res.data;
             this.btn1 = this.btn1s[0];
         });
-        this.btn2Service.getAll().then((res) => {
+        this.hospitaliseService.getAll().then((res) => {
             this.btn2s = res.data;
             this.btn2 = this.btn2s[0];
         });
-        this.btn3Service.getAll().then((res) => {
+        this.ehpadService.getAll().then((res) => {
             this.btn3s = res.data;
             this.btn3 = this.btn3s[0];
         });
-        this.btn4Service.getAll().then((res) => {
+        this.visiteService.getAll().then((res) => {
             this.btn4s = res.data;
             this.btn4 = this.btn4s[0];
         });
 
     }
+    create() {
+        if (this.stat.length > 0) this.stat.forEach((v, i) => {
+            this.delete(v);
+        });
+        this.statService.create(this.stats).then(() => {
 
-    /*this.todoService = todoService;
-    this.load();*/
+            this.stats = {};
+            this.load();
+        });
+    }
+    update(stat) {
+        this.statService.update(stat._id, stat).then(() => {
+            this.load();
+        });
+    }
 
-    /*
-        load() {
-            this.todoService.getAll().then((res) => {
-                this.todos = res.data;
-            })
-        }
-
-        create() {
-            this.todoService.create(this.todo).then(() => {
-                this.todo = '';
-                this.load()
-            })
-        }
-
-        update(todo) {
-            this.todoService.update(todo._id, todo.description).then(() => {
-                this.load()
-            })
-        }
-
-        delete(todo) {
-            this.todoService.delete(todo._id).then(() => {
-                this.load()
-            })
-        }
-    */
+    delete(stat) {
+        this.statService.delete(stat._id).then(() => {
+            this.load();
+        });
+    }
 }
