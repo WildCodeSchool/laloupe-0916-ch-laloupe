@@ -2,9 +2,6 @@
 <div class= "row row-slider">
 <div class="slider col s12" id="scrollslider">
     <div class="caption center-align titlepres">
-        <div class="message">
-            <h1 id= "mainTitle">Bienvenue au Centre Hospitalier de <br>La Loupe</h1>
-        </div>
     </div>
     <ul class="slides">
         <li>
@@ -200,7 +197,6 @@
 <!-- Début Description -->
 <div class="container textevue presentation">
     <div class="col s12 m7 textevue">
-        <h2 class="header center-align textevue">Centre Hospitalier de La Loupe</h2>
         <div class="card horizontal">
             <div class="card-stacked">
                 <div class="card-content">
@@ -210,8 +206,6 @@
                         Vous entrez au Centre Hospitalier de La Loupe. Soyez assuré que tout sera mis en oeuvre pour que votre séjour se passe dans les meilleures conditions.
                         <br>
                         Le personnel de l'hôpital sera à vos côtés, disponible et attentif à vos demandes. Il mettra en oeuvre toutes ses compétences et son expérience pour que votre séjour soit le plus agréable possible.
-                        <br>
-                        Que votre séjour soit le plus confortable possible.
                     </p>
                 </div>
             </div>
@@ -227,26 +221,59 @@
     <div id="slider2" class="carousel textevue">
         <h2 id="carouselh2">Le Centre Hospitalier en quelques chiffres</h2>
         <a class="carousel-item" href="#one!">
-            <i class="large material-icons white-text">tag_faces</i>
-            <p class="white-text textevue">200 professionnels disponibles</p>
+            <i class="large material-icons white-text">group</i>
+            <p class="white-text textevue">{{vm.stat.texte1}}</p>
         </a>
         <a class="carousel-item" href="#two!!">
-            <i class="large material-icons white-text">insert_chart</i>
-            <p class="white-text textevue">A.H.P.A.D : taux d'occuptaion 99.05%
+            <i class="large material-icons white-text">home</i>
+            <p class="white-text textevue">{{vm.stat.texte2}}
             </p>
         </a>
         <a class="carousel-item" href="#three!">
             <i class="large material-icons white-text">hotel</i>
-            <p class="white-text textevue">223 lits</p>
+            <p class="white-text textevue">{{vm.stat.texte3}}</p>
         </a>
         <a class="carousel-item" href="#four!">
-            <i class="large material-icons white-text">insert_chart</i>
-            <p class="white-text textevue">S.S.I.A.D : taux d'occuptaion 94.13%
+            <i class="large material-icons white-text">domain</i>
+            <p class="white-text textevue">{{vm.stat.texte4}}
             </p>
         </a>
         <a class="carousel-item" href="#five!">
-            <i class="large material-icons white-text">enhanced_encryption</i>
-            <p class="white-text textevue">Hospitalisation 2015 : 392
+            <i class="large material-icons white-text">home</i>
+            <p class="white-text textevue">{{vm.stat.texte5}}
+            </p>
+        </a>
+        <a class="carousel-item" href="#one!">
+            <i class="large material-icons white-text">hotel</i>
+            <p class="white-text textevue">{{vm.stat.texte6}}</p>
+        </a>
+        <a class="carousel-item" href="#two!!">
+            <i class="large material-icons white-text">domain</i>
+            <p class="white-text textevue">{{vm.stat.texte7}}
+            </p>
+        </a>
+        <a class="carousel-item" href="#three!">
+            <i class="large material-icons white-text">hotel</i>
+            <p class="white-text textevue">{{vm.stat.texte8}}</p>
+        </a>
+        <a class="carousel-item" href="#four!">
+            <i class="large material-icons white-text">local_hospital</i>
+            <p class="white-text textevue">{{vm.stat.texte9}}
+            </p>
+        </a>
+        <a class="carousel-item" href="#five!">
+            <i class="large material-icons white-text">home</i>
+            <p class="white-text textevue">{{vm.stat.texte10}}
+            </p>
+        </a>
+        <a class="carousel-item" href="#four!">
+            <i class="large material-icons white-text">hotel</i>
+            <p class="white-text textevue">{{vm.stat.texte11}}
+            </p>
+        </a>
+        <a class="carousel-item" href="#five!">
+            <i class="large material-icons white-text">local_hospital</i>
+            <p class="white-text textevue">{{vm.stat.texte12}}
             </p>
         </a>
     </div>
