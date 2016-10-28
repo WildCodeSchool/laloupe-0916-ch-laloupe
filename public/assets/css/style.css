@@ -115,8 +115,8 @@ nav .button-collapse i {
 
 
 /* .nav-wrapper span {
-    position: absolute;
-    padding-left: 10px;
+position: absolute;
+padding-left: 10px;
 } */
 
 #logo {
@@ -352,13 +352,14 @@ p {
 
 .tilesidenavbar {
     text-decoration: underline;
-
-#imgCatCenter {
-  height : 500px;
 }
 
-.tilesidenavbar{
-  text-decoration: underline;
+#imgCatCenter {
+    height: 500px;
+}
+
+.tilesidenavbar {
+    text-decoration: underline;
 }
 
 .description img {
@@ -396,7 +397,6 @@ p {
     padding-top: 2%;
     color: black;
     text-decoration: underline;
-
 }
 
 .categorietemplate .card {
@@ -423,6 +423,7 @@ p {
 #categorieHeight {
     min-height: 700px;
 }
+
 
 /* Responsive */
 
