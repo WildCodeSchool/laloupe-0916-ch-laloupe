@@ -2,15 +2,15 @@
 <div class="container ">
     <div class="row" id="categorieHeight">
         <div class="col s12 m9">
-          <div  ng-repeat='apropos in vm.aproposs | orderBy:"$index":true'>
-            <h4 class="header center-align" id='{{apropos._id}}'>
+          <div  ng-repeat='presse in vm.presses | orderBy:"$index":true'>
+            <h4 class="header center-align" id='{{presse._id}}'>
                 <i class="material-icons"></i>
-                {{apropos.titre}}
+                {{presse.titre}}
             </h4>
             <div class="card horizontal">
                 <div class="card-stacked">
                     <div class="card-content">
-                        <p id="cardtext" class="flow-text justify" ng-bind-html='apropos.texte'></p>
+                        <p id="cardtext" class="flow-text justify" ng-bind-html='presse.texte'></p>
                     </div>
                 </div>
             </div>
@@ -25,8 +25,8 @@
                         <span class="tilesidenavbar">Navigation</span>
                     </div>
                     <ul>
-                        <li ng-repeat='apropos in vm.aproposs | orderBy:"$index":true'>
-                            <a class="section scrollspy" ng-click="vm.jsScrollTo(apropos._id)">{{apropos.titre}}</a>
+                        <li ng-repeat='presse in vm.presses | orderBy:"$index":true'>
+                            <a class="section scrollspy" ng-click="vm.jsScrollTo(presse._id)">{{presse.titre}}</a>
                         </li>
                     </ul>
                 </div>

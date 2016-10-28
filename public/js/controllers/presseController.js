@@ -1,7 +1,7 @@
-class aproposController {
+class presseController {
 
-    constructor(aproposService) {
-        this.aproposService = aproposService;
+    constructor(presseService) {
+        this.presseService = presseService;
         this.load();
         $(document).ready(function() {
             $('.collapsible').collapsible({
@@ -22,8 +22,8 @@ class aproposController {
         };
     }
     load() {
-        this.aproposService.getAll().then((res) => {
-            this.aproposs = res.data;
+        this.presseService.getAll().then((res) => {
+            this.presses = res.data;
         });
     }
 }

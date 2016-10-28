@@ -20,17 +20,12 @@ class actualiteController {
     }
     load() {
         this.actualiteService.getAll().then((res) => {
-            this.actualite = res.data;
-            this.actualites = res.data[0];
+            this.actualites = res.data;
         });
     }
-    create2() {
-        if (this.actualite.length > 0) this.actualite.forEach((v, i) => {
-            this.delete(v);
-        });
-        this.actualiteService.create(this.actualites).then(() => {
-
-            this.actualites = {};
+    create() {
+        this.actualiteService.create(this.actualite).then(() => {
+            this.actualite = {};
             this.load();
         });
     }
