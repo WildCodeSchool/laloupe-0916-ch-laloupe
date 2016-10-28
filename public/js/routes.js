@@ -11,6 +11,11 @@ const routes = ($routeProvider) => {
             controller: 'aproposController',
             controllerAs: 'vm'
         })
+        .when('/presse', {
+            templateUrl: 'views/presse/presse.html',
+            controller: 'presseController',
+            controllerAs: 'vm'
+        })
         .when('/marche', {
             templateUrl: 'views/marches/marche.html',
             controller: 'marcheController',
