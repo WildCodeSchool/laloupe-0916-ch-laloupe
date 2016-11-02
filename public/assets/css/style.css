@@ -72,7 +72,6 @@ nav ul a.btn-urgence:hover {
 /* Second Navbar */
 
 nav .button-collapse i {
-    margin-top: 15px;
     margin-right: 15px;
     font-size: 4em
 }
@@ -348,7 +347,7 @@ p {
 }
 
 #imgCatCenter {
-    height: 500px;
+    height: 400px;
 }
 
 .tilesidenavbar {
@@ -613,8 +612,8 @@ p {
         padding-left: 30px;
     }
     #logo img {
-        width: 80px;
-        height: 80px;
+        width: 60px;
+        height: 60px;
     }
     #menuTitle {
         line-height: 30px;
