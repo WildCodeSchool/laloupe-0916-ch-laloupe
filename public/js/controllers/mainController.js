@@ -5,7 +5,7 @@ class mainController {
         this.hospitaliseService = hospitaliseService;
         this.ehpadService = ehpadService;
         this.visiteService = visiteService;
-            this.statService = statService;
+        this.statService = statService;
         this.load();
 
         $(".button-collapse").sideNav();
@@ -47,7 +47,6 @@ class mainController {
         $("a.normal").click(function() {
             $(".textevue").css("font-size", "");
         });
-
 
         $(document).ready(function() {
             // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
