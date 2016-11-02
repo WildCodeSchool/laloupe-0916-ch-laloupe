@@ -12,7 +12,7 @@ const statSchema = new mongoose.Schema({
   texte9: String,
   texte10: String,
   texte11: String,
-  texte12:String
+  texte12: String
 });
 
 let model = mongoose.model('Stat', statSchema);
@@ -50,7 +50,7 @@ export default class Stat {
                 texte7: req.body.texte7,
                 texte8: req.body.texte8,
                 texte9: req.body.texte9,
-                texte10: req.body.text10,
+                texte10: req.body.texte10,
                 texte11: req.body.texte11,
                 texte12: req.body.texte12
             },

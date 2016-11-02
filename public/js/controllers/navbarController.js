@@ -10,7 +10,7 @@ class navbarController {
                   $('#urgenceHide').addClass('ng-hide');
                   $('.group-btn').show();
                 $('#topFixed').css({
-                    'margin-top': '100px'
+                    'margin-top': '64px'
                 });
             }
             if ($(window).scrollTop() < $('#scrollspy').height()) {

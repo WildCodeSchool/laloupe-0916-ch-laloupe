@@ -4,7 +4,7 @@ class categorieController {
             this.$routeParams = $routeParams;
             this.tinymceOptions = {
                 toolbar: "forecolor | insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image",
-                plugins: 'advlist autolink link image lists charmap autoresize textcolor'
+                plugins: 'advlist fullscreen autolink link image lists charmap autoresize textcolor'
             };
             this.categorieService = categorieService;
             this.load();
@@ -32,19 +32,29 @@ class categorieController {
                 }
             }, false);
     }
+    showService() {
+      $(".serviceUpdate").hide();
+      var select = document.getElementById("serviceSelect");
+      var choice = select.selectedIndex;
+      var valeur = select.options[choice].value;
+      console.log(valeur);
+      $("#" + valeur).show();
+    }
+
+    uplodFileChangeImage() {
+      this.UploadImg = '/uploads/img_' + document.getElementById('uploadImage').value.split(/(\|\/)/g).pop().replace('C:\\fakepath\\', '');
+    }
     load() {
       this.categorieService.getAll().then((res) => {
           this.categories = res.data;
+          var ServiceSelect = document.getElementById('serviceSelect').value;
+          console.log(document.getElementById('serviceSelect').value);
       });
     }
 
     create(categorie) {
       var urlImage = '/uploads/img_' + document.getElementById('uploadImage').value.split(/(\|\/)/g).pop().replace('C:\\fakepath\\', '');
-        console.log(urlImage);
         this.categorie.photo = urlImage;
-
-        if (!this.categorie.texte)
-            this.categorie.texte = "";
 
         this.categorieService.create(this.categorie).then(() => {
           this.categorie = {};
