@@ -19,6 +19,15 @@
                       </div>
                     </div>
                     <div class="input-field col s12">
+                      <div class="input-field col s6">
+                        <input file-upload type="file" placeholder="Photo du service" id="uploadImage" name='file'><br><br>
+                      </div>
+                      <div class="input-field col s6">
+                        <button ng-click='vm.uplodFileChangeImage()' class="btn btn-default">Envoyer l'image</button>
+                      </div>
+                    </div>
+                    <div class="input-field col s12">
+                      <p><input type="text" class="form-control " placeholder="lien de l'image" ng-model='vm.UploadImg'></p>
                       <button ng-click='vm.create(vm.presse)' class="btn btn-default">Ajouter</button>
                     </div>
                 </form>
