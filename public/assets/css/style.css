@@ -83,8 +83,8 @@ nav .button-collapse i {
 }
 
 #push nav {
-    height: 100px;
-    line-height: 100px;
+    height: 64px;
+    line-height: 64ppx;
 }
 
 #push nav li a {
@@ -92,20 +92,13 @@ nav .button-collapse i {
     color: black;
 }
 
-.arrowdropdown {
-    margin-top: 18px
-}
-
 #navbardeux {
     background-color: white;
 }
 
 #menuTitle {
-    position: absolute;
     font-size: 2em;
-    padding-left: 10px;
-    left: 160px;
-    right: 0px;
+    padding-left: 80px;
     width: 500px;
 }
 
@@ -126,8 +119,8 @@ padding-left: 10px;
 
 #logo img {
     padding-top: 5px;
-    width: 100px;
-    height: 100px;
+    width: 60px;
+    height: 60px;
 }
 
 #dropdown1 {
@@ -432,8 +425,6 @@ p {
         padding-left: 10px;
     }
     #menuTitle {
-        width: 25%;
-        line-height: 40px;
         padding-top: 10px;
         left: 110px;
     }

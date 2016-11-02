@@ -1,7 +1,7 @@
-class aproposController {
+class presseController {
 
-    constructor(aproposService) {
-        this.aproposService = aproposService;
+    constructor(presseService) {
+        this.presseService = presseService;
 
         this.tinymceOptions = {
             toolbar: "forecolor | insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image",
@@ -10,25 +10,25 @@ class aproposController {
         this.load();
     }
     load() {
-        this.aproposService.getAll().then((res) => {
-            this.aproposs = res.data;
+        this.presseService.getAll().then((res) => {
+            this.presses = res.data;
         });
     }
     create() {
-        this.aproposService.create(this.apropos).then(() => {
-            this.apropos = {};
+        this.presseService.create(this.presse).then(() => {
+            this.presse = {};
             this.load();
         });
     }
 
-    update(apropos) {
-        this.aproposService.update(apropos._id, apropos).then(() => {
+    update(presse) {
+        this.presseService.update(presse._id, presse).then(() => {
             this.load();
         });
     }
 
-    delete(apropos) {
-        this.aproposService.delete(apropos._id).then(() => {
+    delete(presse) {
+        this.presseService.delete(presse._id).then(() => {
             this.load();
         });
     }

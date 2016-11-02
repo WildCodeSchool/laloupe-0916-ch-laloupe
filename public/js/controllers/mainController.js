@@ -142,7 +142,7 @@ class mainController {
     }
     load() {
         this.statService.getAll().then((res) => {
-            this.stat = res.data;
+            this.stat = res.data[0];
             this.stats = res.data[0];
         });
         this.rendezvousService.getAll().then((res) => {
