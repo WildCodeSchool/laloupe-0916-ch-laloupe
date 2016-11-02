@@ -37,7 +37,7 @@
                       <div class="col s12 m6">
                         <div class="input-field col s12">
                             <input file-upload type="file" placeholder="Photo du service" id="uploadImage" name='file'><br><br>
-                            <button ng-click='vm.uplodFileChangeImage()' class="btn btn-default">Envoyer l'image</button>
+                            <button ng-click='vm.uploadFileChangeImage()' class="btn btn-default">Envoyer l'image</button>
                         </div>
                         <div class="input-field col s12 optionBlocImg">
                                   <img src="../assets/img/left.gif" alt="" />
@@ -65,9 +65,8 @@
                           Saisir le texte de l'article ou un lien vers cette article. Ne pas remplir les deux champs.
                         </h5>
                         <br>
-                          <p>Ci-dessous le lien à coller dans l'éditeur de texte (Veulliez uploader l'image avant) : </p>
+                          <p>Ci-dessous le lien à coller dans l'éditeur de texte (veuillez uploader l'image avant) : </p>
                           <p><input type="text" class="form-control " placeholder="lien de l'image" ng-model='vm.UploadImg'></p>
-                          <p>
                           <p>
                               <textarea ui-tinymce="vm.tinymceOptions" ng-model='vm.categorie.texte'></textarea>
                           </p>
@@ -98,12 +97,13 @@
                   </select>
                   <br>
                   <div class="col s12 m6 imgUploaded">
-                    <img ng-src="{{ categorie.photo }}" alt="" />
+                    <img ng-show='vm.UploadImgUpdate == Undefined' ng-src="{{ categorie.photo }}" alt="" />
+                    <img ng-src="{{ vm.UploadImgUpdate }}" alt="" />
                   </div>
                   <div class="col s12 m6">
                     <div class="input-field col s12">
-                        <p><input file-upload type="file" placeholder="Photo du service" id="uploadImage" name='file'><br><br>
-                          <button ng-click='vm.uplodFileChangeImage()' class="btn btn-default">Envoyer l'image</button>
+                        <p><input file-upload type="file" placeholder="Photo du service" id="uploadImageUpdate{{categorie._id}}" name='file'><br><br>
+                          <button ng-click='vm.uploadFileChangeImageUpdate(categorie._id)' class="btn btn-default">Envoyer l'image</button>
                         </p>
                     </div>
                     <div class="input-field col s12 optionBlocImg">
@@ -120,8 +120,8 @@
                             <input name="group{{$index}}" id='banane{{$index}}B' type="radio" ng-model='categorie.position' value="2"/>
                             <label for='banane{{$index}}B'>
                             </label>
-                            <input name="group{{$index}}" id='banane{{$index}}' type="radio" ng-model='categorie.position' value="1"/>
-                            <label for='banane{{$index}}'>
+                            <input name="group{{$index}}" id='banane{{$index}}A' type="radio" ng-model='categorie.position' value="1"/>
+                            <label for='banane{{$index}}A'>
                             </label>
                     </div>
                   </div>
@@ -130,8 +130,8 @@
                       Saisir le texte de l'article ou un lien vers cette article. Ne pas remplir les deux champs.
                     </h5>
                     <br>
-                      <p>Ci-dessous le lien à coller dans l'éditeur de texte (Veulliez uploader l'image avant) : </p>
-                      <p><input type="text" class="form-control " placeholder="lien de l'image" ng-model='vm.UploadImg'></p>
+                      <p>Ci-dessous le lien à coller dans l'éditeur de texte (veuillez uploader l'image avant) : </p>
+                      <p><input type="text" class="form-control " placeholder="lien de l'image" ng-model='vm.UploadImgUpdate'></p>
                       <p>
                           <textarea ui-tinymce="vm.tinymceOptions" ng-model='categorie.texte'></textarea>
                       </p>
@@ -141,8 +141,8 @@
                   </div>
               </div>
                 <div class="input-field col s12">
-                  <button ng-click='vm.update(categorie)' class="btn btn-default">Enregister</button>
-                  <button ng-click='vm.delete(categorie)' class="btn btn-default" href="#modal-warning">Supprimer</button>
+                  <button ng-click='vm.update(vm.categorie)' class="btn btn-default">Enregistrer</button>
+                  <button ng-click='vm.delete(vm.categorie)' class="btn btn-default" href="#modal-warning">Supprimer</button>
                 </div>
               </form>
           </div>

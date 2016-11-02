@@ -41,9 +41,16 @@ class categorieController {
       $("#" + valeur).show();
     }
 
-    uplodFileChangeImage() {
+    uploadFileChangeImage() {
       this.UploadImg = '/uploads/img_' + document.getElementById('uploadImage').value.split(/(\|\/)/g).pop().replace('C:\\fakepath\\', '');
+      console.log(document.getElementById('uploadImage').value);
     }
+
+    uploadFileChangeImageUpdate(index) {
+      this.UploadImgUpdate = '/uploads/img_' + document.getElementById('uploadImageUpdate' + index).value.split(/(\|\/)/g).pop().replace('C:\\fakepath\\', '');
+      console.log(this.UploadImgUpdate);
+    }
+
     load() {
       this.categorieService.getAll().then((res) => {
           this.categories = res.data;
@@ -55,7 +62,7 @@ class categorieController {
     create(categorie) {
       var urlImage = '/uploads/img_' + document.getElementById('uploadImage').value.split(/(\|\/)/g).pop().replace('C:\\fakepath\\', '');
         this.categorie.photo = urlImage;
-
+        console.log(categorie.position);
         this.categorieService.create(this.categorie).then(() => {
           this.categorie = {};
           this.load();
