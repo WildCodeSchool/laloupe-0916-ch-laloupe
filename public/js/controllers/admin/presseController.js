@@ -37,6 +37,10 @@ class presseController {
       this.UploadImg = '/uploads/img_' + document.getElementById('uploadImage').value.split(/(\|\/)/g).pop().replace('C:\\fakepath\\', '');
     }
 
+    uplodFileChangeImageUpdate() {
+      this.UploadImgUpdate = '/uploads/img_' + document.getElementById('uploadImageUpdate').value.split(/(\|\/)/g).pop().replace('C:\\fakepath\\', '');
+    }
+
     load() {
         this.presseService.getAll().then((res) => {
             this.presses = res.data;
