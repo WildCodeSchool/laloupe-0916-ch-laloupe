@@ -68,14 +68,6 @@ const routes = ($routeProvider, $httpProvider) => {
                 connected: checkIsConnected
             }
         })
-        .when('/annuaire', {
-            templateUrl: '../views/admin/annuaire.html',
-            controller: 'annuaireController',
-            controllerAs: 'vm',
-            resolve: {
-                connected: checkIsConnected
-            }
-        })
         .when('/apropos', {
             templateUrl: '../views/admin/apropos.html',
             controller: 'aproposController',
