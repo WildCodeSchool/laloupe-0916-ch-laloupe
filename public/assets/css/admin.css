@@ -296,3 +296,10 @@ margin-top: 5%
     font-size: 3em !important;
     margin: 7%;
 }
+
+/* editeur */
+
+.mce-container.mce-window {
+  width: 600px;
+  margin-left: 250px;
+}

@@ -5,7 +5,7 @@ class presseController {
 
         this.tinymceOptions = {
             toolbar: "forecolor | insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image",
-            plugins: 'advlist autolink link image lists charmap autoresize textcolor'
+            plugins: 'advlist fullscreen autolink link image lists charmap autoresize textcolor'
         };
         this.load();
 
