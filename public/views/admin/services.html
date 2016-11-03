@@ -4,7 +4,7 @@
           <div>
               <form class="form-inline">
                 <div class=" center col s12">
-                  <h2>Ajouter ou mettre à jours les services</h2>
+                  <h2>Ajouter ou mettre à jour les services</h2>
                 </div>
                   <div class="form-group col s12">
                     <label>Selectionner ou créer un service</label>
@@ -97,8 +97,7 @@
                   </select>
                   <br>
                   <div class="col s12 m6 imgUploaded">
-                    <img ng-show='vm.UploadImgUpdate == Undefined' ng-src="{{ categorie.photo }}" alt="" />
-                    <img ng-src="{{ vm.UploadImgUpdate }}" alt="" />
+                    <img ng-src="{{vm.UploadImgUpdate == Undefined ? categorie.photo : categorie.photo = vm.UploadImgUpdate}}" ng-model='categorie.photo' alt="" />
                   </div>
                   <div class="col s12 m6">
                     <div class="input-field col s12">
@@ -141,8 +140,8 @@
                   </div>
               </div>
                 <div class="input-field col s12">
-                  <button ng-click='vm.update(vm.categorie)' class="btn btn-default">Enregistrer</button>
-                  <button ng-click='vm.delete(vm.categorie)' class="btn btn-default" href="#modal-warning">Supprimer</button>
+                  <button ng-click='vm.update(categorie)' class="btn btn-default">Enregistrer</button>
+                  <button ng-click='vm.delete(categorie)' class="btn btn-default" href="#modal-warning">Supprimer</button>
                 </div>
               </form>
           </div>
