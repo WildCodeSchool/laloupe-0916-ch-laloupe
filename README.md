@@ -15,15 +15,15 @@ Frontend : es2015 native
 
 ### Auto-install
 
-[Bash script for Ubuntu & OSX](https://gist.github.com/JbPasquier/4857fd80af2d7ae2f987754db5887969)
+[Bash script for Ubuntu & OSX](https://gist.github.com/adrienfloor/b8141717ad86585c430e16ec0c6142ff)
 
 ### Execution
 
 #### Installation
 
 ```bash
-git clone git@github.com:JbPasquier/mean-starter-es6.git
-cd mean-starter-es6
+git clone git@github.com/WildCodeSchool/laloupe-0916-ch-laloupe.git
+cd laloupe-0916-ch-laloupe
 npm install
 bower install
 ```
