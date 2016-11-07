@@ -131,6 +131,16 @@ padding-left: 10px;
     color: black;
 }
 
+.dropdown-button {
+    font-size: 1.8em;
+    color: black;
+    padding: 0 16px;
+    margin: 0;
+}
+
+.dropdown-button .arrowdropdown {
+    margin-top: 0;
+}
 
 /* title and paragraph */
 
