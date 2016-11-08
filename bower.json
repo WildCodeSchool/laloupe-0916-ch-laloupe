@@ -7,15 +7,14 @@
   ],
   "license": "ISC",
   "dependencies": {
-    "jquery": "^2.2.2",
+    "jquery": "^2.1.1",
     "angular": "^1.5.6",
     "angular-route": "^1.5.6",
     "bootstrap": "^3.3.6",
     "angular-sanitize": "^1.5.8",
     "tinymce": "^4.4.3",
     "angular-ui-tinymce": "^0.0.17",
-    "materialize": "^0.97.7",
-    "angular-materialize": "^0.2.1"
+    "materialize": "#0.97.7"
   },
   "ignore": [
     "**/.*",
@@ -30,5 +29,8 @@
     "package.json",
     "_includes",
     "_layouts"
-  ]
+  ],
+  "devDependencies": {
+    "angular-ui-tinymce": "^0.0.17"
+  }
 }
