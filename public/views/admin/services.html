@@ -1,174 +1,175 @@
 <div class="row">
-  <form class="col offset-l2 l8 offset-l2 z-depth-6 card-panel">
-      <div class="row">
-          <div>
-              <form class="form-inline">
-                <div class=" center col s12">
-                  <h2>Ajouter ou mettre à jour les services</h2>
-                </div>
-                  <div class="form-group col s12">
-                    <label>Selectionner ou créer un service</label>
-                    <select class="browser-default" ng-model='vm.categorie.idparent' id="serviceSelect" ng-change="vm.showService()">
-                          <option disabled selected value=''>Service...</option>
-                          <option value='ajout-0'>Créer un service</option>
-                          <option ng-repeat='categorie in vm.categories | orderBy: ["idparent","titre"]' value="{{categorie._id}}">{{categorie.titre}}</option>
-                      </select>
+    <form class="col offset-l2 l8 offset-l2 z-depth-6 card-panel">
+        <div class="row">
+            <div>
+                <form class="form-inline">
+                  <div class=" center col s12">
+                    <h2>Ajouter ou mettre à jour les services</h2>
                   </div>
-              </form>
-          </div>
-      </div>
-  </form>
-  <form class="col offset-l2 l8 offset-l2 z-depth-6 card-panel serviceUpdate" id='ajout-0'>
-      <div class="row">
-        <h2>Ajouter un service</h2>
-          <div>
-              <form class="form-inline">
-                  <div class="form-group">
-                      <p><input type="text" class="form-control " placeholder="Nom du service" ng-model='vm.categorie.titre'></p>
-                      <select class="browser-default" ng-model='vm.categorie.idparent'>
-                          <option disabled selected value=''>Service parent...</option>
-                          <option value='0'>Racine du menu "Nos Services"</option>
-                          <option ng-repeat='categorie in vm.categories | orderBy: ["idparent","titre"]' value="{{categorie._id}}">{{categorie.titre}}</option>
-                      </select>
-                      <br>
-                      <div class="col s12 m6 imgUploaded">
-                        <img ng-src="{{ vm.UploadImg }}" alt="" />
-                      </div>
-                      <div class="col s12 m6">
-                        <div class="input-field col s12">
-                            <input file-upload type="file" placeholder="Photo du service" id="uploadImage" name='file'><br><br>
-                            <button ng-click='vm.uploadFileChangeImage()' class="btn btn-default">Envoyer l'image</button>
-                        </div>
-                        <div class="input-field col s12 optionBlocImg">
-                                  <img src="../assets/img/left.gif" alt="" />
+                    <div class="form-group col s12">
+                      <label>Selectionner ou créer un service</label>
+                      <select class="browser-default" ng-model='list' id="serviceSelect" ng-change="vm.showService()">
+                            <option disabled selected value=''>Service...</option>
+                            <option value='ajout-0'>Créer un service</option>
+                            <option ng-repeat='categorie in vm.categories | orderBy: ["idparent","titre"]' value="{{categorie._id}}">{{categorie.titre}}</option>
+                        </select>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </form>
 
-                                  <img src="../assets/img/mid.gif" alt="" />
-
-                                  <img src="../assets/img/right.gif" alt="" />
-                        </div>
-                        <div class="input-field col s12 optionBloc">
-                                <input name="group1" type="radio" id="testC" value="3" ng-model='vm.categorie.position'/>
-                                <label for="testC">
-                                </label>
-
-                                <input name="group1" type="radio" id="testB" value="2" ng-model='vm.categorie.position'/>
-                                <label for="testB">
-                                </label>
-
-                                <input name="group1" type="radio" id="testA" value="1" ng-model='vm.categorie.position'/>
-                                <label for="testA">
-                                </label>
-                        </div>
-                      </div>
-                      <div class="input-field col s12">
-                        <h5>
-                          Saisir le texte de l'article ou un lien vers cette article. Ne pas remplir les deux champs.
-                        </h5>
+    <form class="col offset-l2 l8 offset-l2 z-depth-6 card-panel serviceUpdate" id='ajout-0'>
+        <div class="row">
+          <h2>Ajouter un service</h2>
+            <div>
+                <form class="form-inline">
+                    <div class="form-group">
+                        <p><input type="text" class="form-control " placeholder="Nom du service" ng-model='vm.categorie.titre'></p>
+                        <select class="browser-default" ng-model='vm.categorie.idparent'>
+                            <option disabled value=''>Service parent...</option>
+                            <option value='0'>Racine du menu "Nos Services"</option>
+                            <option ng-repeat='categorie in vm.categories | orderBy: ["idparent","titre"]' value="{{categorie._id}}">{{categorie.titre}}</option>
+                        </select>
                         <br>
-                          <p>Ci-dessous le lien à coller dans l'éditeur de texte (veuillez uploader l'image avant) : </p>
-                          <p><input type="text" class="form-control " placeholder="Lien de l'image" ng-model='vm.UploadImg'></p>
-                          <p>
-                              <textarea ui-tinymce="vm.tinymceOptions" ng-model='vm.categorie.texte'></textarea>
+                        <div class="col s12 m6 imgUploaded">
+                          <img ng-src="{{ vm.UploadImg }}" alt="" />
+                        </div>
+                        <div class="col s12 m6">
+                          <div class="input-field col s12">
+                              <input file-upload type="file" placeholder="Photo du service" id="uploadImage" name='file'><br><br>
+                              <button ng-click='vm.uploadFileChangeImage()' class="btn btn-default">Envoyer l'image</button>
+                          </div>
+                          <div class="input-field col s12 optionBlocImg">
+                                    <img src="../assets/img/left.gif" alt="" />
+
+                                    <img src="../assets/img/mid.gif" alt="" />
+
+                                    <img src="../assets/img/right.gif" alt="" />
+                          </div>
+                          <div class="input-field col s12 optionBloc">
+                                  <input name="group1" type="radio" id="testC" value="3" ng-model='vm.categorie.position'/>
+                                  <label for="testC">
+                                  </label>
+
+                                  <input name="group1" type="radio" id="testB" value="2" ng-model='vm.categorie.position'/>
+                                  <label for="testB">
+                                  </label>
+
+                                  <input name="group1" type="radio" id="testA" value="1" ng-model='vm.categorie.position'/>
+                                  <label for="testA">
+                                  </label>
+                          </div>
+                        </div>
+                        <div class="input-field col s12">
+                          <h5>
+                            Saisir le texte de l'article ou un lien vers cette article. Ne pas remplir les deux champs.
+                          </h5>
+                          <br>
+                            <p>Ci-dessous le lien à coller dans l'éditeur de texte (veuillez uploader l'image avant) : </p>
+                            <p><input type="text" class="form-control " placeholder="lien de l'image" ng-model='vm.UploadImg'></p>
+                            <p>
+                                <textarea ui-tinymce="vm.tinymceOptions" ng-model='vm.categorie.texte'></textarea>
+                            </p>
+                        </div>
+                        <div class="input-field col s12">
+                            <p><input type="text" class="form-control" placeholder="Lien du service" ng-model='vm.categorie.lien'></p>
+                        </div>
+                    </div>
+                    <div class="input-field col s12">
+                        <button ng-click='vm.create(vm.categorie)' class="btn btn-default" onclick="Materialize.toast('Service enregistré', 4000,'rounded')">Ajouter</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </form>
+
+    <form class="col offset-l2 l8 offset-l2 z-depth-6 card-panel serviceUpdate" ng-repeat='categorie in vm.categories | orderBy:"+categorie"' id='{{categorie._id}}'>
+      <div class="row">
+        <h2>Liste des services</h2>
+          <div>
+            <form class="form-inline">
+                <div class="form-group">
+                    <p><input type="text" class="form-control" placeholder="Nom du service" ng-model='categorie.titre'></p>
+                    <select class="browser-default" ng-model='categorie.idparent'>
+                        <option disabled selected value=''>Service parent...</option>
+                        <option value='0'>Racine du menu "Nos Services"</option>
+                        <option ng-repeat='categorie in vm.categories | orderBy: ["idparent","titre"]' value="{{categorie._id}}">{{categorie.titre}}</option>
+                    </select>
+                    <br>
+                    <div class="col s12 m6 imgUploaded">
+                      <img ng-src="{{vm.UploadImgUpdate == Undefined ? categorie.photo : categorie.photo = vm.UploadImgUpdate}}" ng-model='categorie.photo' alt="" />
+                    </div>
+                    <div class="col s12 m6">
+                      <div class="input-field col s12">
+                          <p><input file-upload type="file" placeholder="Photo du service" id="uploadImageUpdate{{categorie._id}}" name='file'><br><br>
+                            <button ng-click='vm.uploadFileChangeImageUpdate(categorie._id)' class="btn btn-default">Envoyer l'image</button>
                           </p>
                       </div>
-                      <div class="input-field col s12">
-                          <p><input type="text" class="form-control" placeholder="Lien du service" ng-model='vm.categorie.lien'></p>
-                      </div>
-                  </div>
-                  <div class="input-field col s12">
-                      <button ng-click='vm.create(vm.categorie)' class="btn btn-default">Ajouter</button>
-                  </div>
-              </form>
-          </div>
-      </div>
-  </form>
+                      <div class="input-field col s12 optionBlocImg">
+                                <img src="../assets/img/left.gif" alt="" />
 
-  <form class="col offset-l2 l8 offset-l2 z-depth-6 card-panel serviceUpdate" ng-repeat='categorie in vm.categories | orderBy:"+categorie"' id='{{categorie._id}}'>
-    <div class="row">
-      <h2>Liste des services</h2>
-        <div>
-          <form class="form-inline">
-              <div class="form-group">
-                  <p><input type="text" class="form-control" placeholder="Nom du service" ng-model='categorie.titre'></p>
-                  <select class="browser-default" ng-model='categorie.idparent'>
-                      <option disabled selected value=''>Service parent...</option>
-                      <option value='0'>Racine du menu "Nos Services"</option>
-                      <option ng-repeat='categorie in vm.categories | orderBy: ["idparent","titre"]' value="{{categorie._id}}">{{categorie.titre}}</option>
-                  </select>
-                  <br>
-                  <div class="col s12 m6 imgUploaded">
-                    <img ng-src="{{vm.UploadImgUpdate == Undefined ? categorie.photo : categorie.photo = vm.UploadImgUpdate}}" ng-model='categorie.photo' alt="" />
-                  </div>
-                  <div class="col s12 m6">
+                                <img src="../assets/img/mid.gif" alt="" />
+
+                                <img src="../assets/img/right.gif" alt="" />
+                      </div>
+                      <div class="input-field col s12 optionBloc">
+                              <input name="group{{$index}}" id='banane{{$index}}C' type="radio" ng-model='categorie.position' value="3"/>
+                              <label for='banane{{$index}}C'>
+                              </label>
+                              <input name="group{{$index}}" id='banane{{$index}}B' type="radio" ng-model='categorie.position' value="2"/>
+                              <label for='banane{{$index}}B'>
+                              </label>
+                              <input name="group{{$index}}" id='banane{{$index}}A' type="radio" ng-model='categorie.position' value="1"/>
+                              <label for='banane{{$index}}A'>
+                              </label>
+                      </div>
+                    </div>
                     <div class="input-field col s12">
-                        <p><input file-upload type="file" placeholder="Photo du service" id="uploadImageUpdate{{categorie._id}}" name='file'><br><br>
-                          <button ng-click='vm.uploadFileChangeImageUpdate(categorie._id)' class="btn btn-default">Envoyer l'image</button>
+                      <h5>
+                        Saisir le texte de l'article ou un lien vers cette article. Ne pas remplir les deux champs.
+                      </h5>
+                      <br>
+                        <p>Ci-dessous le lien à coller dans l'éditeur de texte (veuillez uploader l'image avant) : </p>
+                        <p><input type="text" class="form-control " placeholder="lien de l'image" ng-model='vm.UploadImgUpdate'></p>
+                        <p>
+                            <textarea ui-tinymce="vm.tinymceOptions" ng-model='categorie.texte'></textarea>
                         </p>
                     </div>
-                    <div class="input-field col s12 optionBlocImg">
-                              <img src="../assets/img/left.gif" alt="" />
-
-                              <img src="../assets/img/mid.gif" alt="" />
-
-                              <img src="../assets/img/right.gif" alt="" />
+                    <div class="input-field col s12">
+                        <p><input type="text" class="form-control" placeholder="Lien du service" ng-model='categorie.lien'></p>
                     </div>
-                    <div class="input-field col s12 optionBloc">
-                            <input name="group{{$index}}" id='banane{{$index}}C' type="radio" ng-model='categorie.position' value="3"/>
-                            <label for='banane{{$index}}C'>
-                            </label>
-                            <input name="group{{$index}}" id='banane{{$index}}B' type="radio" ng-model='categorie.position' value="2"/>
-                            <label for='banane{{$index}}B'>
-                            </label>
-                            <input name="group{{$index}}" id='banane{{$index}}A' type="radio" ng-model='categorie.position' value="1"/>
-                            <label for='banane{{$index}}A'>
-                            </label>
-                    </div>
-                  </div>
-                  <div class="input-field col s12">
-                    <h5>
-                      Saisir le texte de l'article ou un lien vers cette article. Ne pas remplir les deux champs.
-                    </h5>
-                    <br>
-                      <p>Ci-dessous le lien à coller dans l'éditeur de texte (veuillez uploader l'image avant) : </p>
-                      <p><input type="text" class="form-control " placeholder="Lien de l'image" ng-model='vm.UploadImgUpdate'></p>
-                      <p>
-                          <textarea ui-tinymce="vm.tinymceOptions" ng-model='categorie.texte'></textarea>
-                      </p>
-                  </div>
-                  <div class="input-field col s12">
-                      <p><input type="text" class="form-control" placeholder="Lien du service" ng-model='categorie.lien'></p>
-                  </div>
-              </div>
-                <div class="input-field col s12">
-                  <button ng-click='vm.update(categorie)' class="btn btn-default">Enregistrer</button>
-                  <button ng-click='vm.delete(categorie)' class="btn btn-default" href="#modal-warning">Supprimer</button>
                 </div>
-              </form>
-          </div>
-      </div>
-  </form>
+                  <div class="input-field col s12">
+                    <button ng-click='vm.update(categorie)' class="btn btn-default">Enregistrer</button>
+                    <button ng-click='vm.delete(categorie)' class="btn btn-default" href="#modal-warning">Supprimer</button>
+                  </div>
+                </form>
+            </div>
+        </div>
+    </form>
 
-  <!-- Modal -->
+    <!-- Modal -->
 
-  <div>
-      <div id="modal_warning" class="modal">
-          <div class="modal-content" id="supModal">
-              <h4 class="center-align" id="warning">
-                  <i class="small material-icons warning">warning</i>
-                  Attention !
-                  <i class="small material-icons warning">warning</i>
-              </h4>
-              <p class="center-align">La suppression d'un utilisateur est irréversible.<br>
-                  Confirmez-vous la suppression de l'utilisateur ? :</p>
+    <div>
+        <div id="modal_warning" class="modal">
+            <div class="modal-content" id="supModal">
+                <h4 class="center-align" id="warning">
+                    <i class="small material-icons warning">warning</i>
+                    Attention !
+                    <i class="small material-icons warning">warning</i>
+                </h4>
+                <p class="center-align">La suppression d'un utilisateur est irréversible.<br>
+                    Confirmez-vous la suppression de l'utilisateur ? :</p>
 
-              <p class="center-align">
-                  [E-mail] - [Nom] [Prénom]
-              </p>
-          </div>
-          <div class="modal-footer">
-              <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat right blue-grey lighten-5">Annuler</a>
-              <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat left red white-text">Confirmer</a>
-          </div>
-      </div>
-  </div>
+                <p class="center-align">
+                    [E-mail] - [Nom] [Prénom]
+                </p>
+            </div>
+            <div class="modal-footer">
+                <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat right blue-grey lighten-5">Annuler</a>
+                <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat left red white-text">Confirmer</a>
+            </div>
+        </div>
+    </div>
 </div>
