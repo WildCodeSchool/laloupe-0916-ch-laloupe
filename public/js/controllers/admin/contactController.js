@@ -1,16 +1,14 @@
-class contactController {
+function contactController(contactService) {
 
-    constructor(contactService) {
-        this.contactService = contactService;
-        this.load();
-    }
-    load() {
+    this.contactService = contactService;
+
+    this.load = () => {
         this.contactService.getAll().then((res) => {
             this.contacts = res.data;
         });
     }
 
-    create() {
+    this.create = () => {
         this.contactService.create(this.contact).then(() => {
 
             this.contact = {};
@@ -18,16 +16,17 @@ class contactController {
         });
     }
 
-    update(contact) {
+    this.update = (contact) => {
         this.contactService.update(contact._id, contact).then(() => {
             this.load();
         });
     }
 
-    delete(contact) {
+    this.delete = (contact) => {
         this.contactService.delete(contact._id).then(() => {
             this.load();
         });
     }
 
+    this.load();
 }
