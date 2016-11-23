@@ -4,7 +4,7 @@ function categorieController(categorieService, $routeParams) {
 
     this.categorieService = categorieService;
 
-    load() {
+    this.load = () => {
         this.categorieService.getOne(this.$routeParams.id).then((res) => {
             this.categorie = res.data; //1x actuelle
             this.categorie.photoFull = this.categorie.photo.replace("img_","");
