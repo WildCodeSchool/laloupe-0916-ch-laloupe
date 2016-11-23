@@ -16,7 +16,7 @@ function actualiteController(actualiteService) {
         }, speed); // Go
         return false;
     };
-    load() {
+    this.load = () => {
         this.actualiteService.getAll().then((res) => {
             this.actualites = res.data;
         });
