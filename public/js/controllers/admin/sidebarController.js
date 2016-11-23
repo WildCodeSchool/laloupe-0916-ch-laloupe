@@ -1,24 +1,21 @@
-class sidebarController {
+function sidebarController(sessionFactory, $rootScope, $window, $location, categorieService) {
 
-    constructor(sessionFactory, $rootScope, $window, $location, categorieService) {
-        this.categorieService = categorieService;
-        this.isLogged = sessionFactory.isLogged;
-        this.sessionFactory = sessionFactory;
-        this.$rootScope = $rootScope;
-        this.$location = $location;
+    this.categorieService = categorieService;
+    this.isLogged = sessionFactory.isLogged;
+    this.sessionFactory = sessionFactory;
+    this.$rootScope = $rootScope;
+    this.$location = $location;
 
-        $(".button-collapse").sideNav();
+    $(".button-collapse").sideNav();
 
-        $rootScope.$on('loginStatusChanged', (event, isLogged) => {
-            this.isLogged = isLogged;
-            this.user = sessionFactory.user;
-            $('#main').css({'padding-left':(this.isLogged?'300px':'0')});
-        });
+    $rootScope.$on('loginStatusChanged', (event, isLogged) => {
+        this.isLogged = isLogged;
+        this.user = sessionFactory.user;
+        $('#main').css({'padding-left':(this.isLogged?'300px':'0')});
+    });
 
 
-    }
-
-    logout() {
+    this.logout = () => {
         this.sessionFactory.isLogged = false;
         this.sessionFactory.user = {};
         this.sessionFactory.token = null;
