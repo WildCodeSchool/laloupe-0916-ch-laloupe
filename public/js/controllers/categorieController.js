@@ -1,12 +1,9 @@
-class categorieController {
+function categorieController(categorieService, $routeParams) {
 
-    constructor(categorieService, $routeParams) {
-        this.$routeParams = $routeParams;
+    this.$routeParams = $routeParams;
 
-        this.categorieService = categorieService;
-        this.load();
+    this.categorieService = categorieService;
 
-    }
     load() {
         this.categorieService.getOne(this.$routeParams.id).then((res) => {
             this.categorie = res.data; //1x actuelle
@@ -21,4 +18,5 @@ class categorieController {
             }
         });
     }
+    this.load();
 }
