@@ -1,24 +1,21 @@
-class userController {
+function userController(userService) {
 
-    constructor(userService) {
-        this.userService = userService;
-        this.load();
+    this.userService = userService;
 
-        $("#addjs").click(function() {
-            $("#showjs").show();
-        });
-        $("#savejs").click(function() {
-            $("#showjs").hide();
-        });
-    }
-    load() {
-      console.log("load");
+    $("#addjs").click(function() {
+        $("#showjs").show();
+    });
+    $("#savejs").click(function() {
+        $("#showjs").hide();
+    });
+
+    this.load = () => {
         this.userService.getAll().then((res) => {
             this.users = res.data;
         });
     }
 
-    create2() {
+    this.create2 = () => {
         this.userService.create(this.user).then(() => {
 
             this.user = {};
@@ -26,18 +23,17 @@ class userController {
         });
     }
 
-    update(user) {
-      console.log("update");
+    this.update = (user) => {
         this.userService.update(user._id, user).then(() => {
             this.load();
         });
     }
 
-    delete(user) {
-      console.log("delete");
+    this.delete = (user) => {
         this.userService.delete(user._id).then(() => {
             this.load();
         });
     }
+    this.load();
 
 }
