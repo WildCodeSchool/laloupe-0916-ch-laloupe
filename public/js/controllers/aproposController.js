@@ -17,7 +17,7 @@ function aproposController(aproposService) {
         }, speed); // Go
         return false;
     };
-    load() {
+    this.load = () => {
         this.aproposService.getAll().then((res) => {
             this.aproposs = res.data;
         });
