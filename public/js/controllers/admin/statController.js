@@ -1,16 +1,13 @@
-class statController {
+function statController(statService) {
 
-    constructor(statService) {
-            this.statService = statService;
-            this.load();
-        }
-    load() {
+    this.statService = statService;
+    this.load = () => {
         this.statService.getAll().then((res) => {
             this.stat = res.data;
             this.stats = res.data[0];
         });
     }
-    create() {
+    this.create = () => {
         if (this.stat.length > 0) this.stat.forEach((v, i) => {
             this.delete(v);
         });
@@ -20,15 +17,16 @@ class statController {
             this.load();
         });
     }
-    update(stat) {
+    this.update = (stat) => {
         this.statService.update(stat._id, stat).then(() => {
             this.load();
         });
     }
 
-    delete(stat) {
+    this.delete = (stat) => {
         this.statService.delete(stat._id).then(() => {
             this.load();
         });
     }
+    this.load();
 }
