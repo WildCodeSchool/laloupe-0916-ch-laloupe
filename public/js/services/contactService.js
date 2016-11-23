@@ -9,15 +9,15 @@ function contactService($http) {
               telephone: data.telephone,
               email: data.email
             });
-        }
+        },
 
         getAll: () => {
             return $http.get('/api/contacts');
-        }
+        },
 
         getOne: (id) => {
             return $http.get('/api/contacts/' + id);
-        }
+        },
 
         update: (id, data) => {
             return $http.put('/api/contacts/' + id, {
@@ -25,7 +25,7 @@ function contactService($http) {
               telephone: data.telephone,
               email: data.email
             });
-        }
+        },
 
         delete: (id) => {
             return $http.delete('/api/contacts/' + id);
