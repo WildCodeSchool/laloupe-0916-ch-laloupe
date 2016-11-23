@@ -2,20 +2,20 @@ function hospitaliseService($http) {
 
     return {
 
-        this.create: (data) =>{
-            return this.$http.post('/api/btn2s', data )
+        create: (data) => {
+            return $http.post('/api/btn2s', data )
         },
 
-        this.getAll: () =>{
-            return this.$http.get('/api/btn2s');
+        getAll: () =>{
+            return $http.get('/api/btn2s');
         },
 
-        this.getOne: (id) =>{
-            return this.$http.get('/api/btn2s/' + id)
+        getOne: (id) =>{
+            return $http.get('/api/btn2s/' + id)
         },
 
-        this.update: (id, data) =>{
-            return this.$http.put('/api/btn2s/' + id, {
+        update: (id, data) =>{
+            return $http.put('/api/btn2s/' + id, {
               title1: data.title1,
               title2: data.title2,
               title3: data.title3,
@@ -25,8 +25,8 @@ function hospitaliseService($http) {
             })
         },
 
-        this.delete: (id) =>{
-            return this.$http.delete('/api/btn2s/' + id)
+        delete: (id) =>{
+            return $http.delete('/api/btn2s/' + id)
         }
 
     }
