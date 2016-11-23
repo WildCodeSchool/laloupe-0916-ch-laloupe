@@ -1,21 +1,18 @@
-class marcheController {
+function marcheController(marcheService) {
 
-    constructor(marcheService) {
-        this.marcheService = marcheService;
+    this.marcheService = marcheService;
 
-        this.tinymceOptions = {
-            toolbar: "forecolor | insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link ",
-            plugins: 'advlist fullscreen autolink link lists charmap autoresize textcolor'
-        };
-        this.load();
-    }
-    load() {
+    this.tinymceOptions = {
+        toolbar: "forecolor | insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link ",
+        plugins: 'advlist fullscreen autolink link lists charmap autoresize textcolor'
+    };
+    this.load = () => {
         this.marcheService.getAll().then((res) => {
             this.marche = res.data;
             this.marches = res.data[0];
         });
     }
-    create2() {
+    this.create2 = () => {
         if (this.marche.length > 0) this.marche.forEach((v, i) => {
             this.delete(v);
         });
@@ -26,16 +23,17 @@ class marcheController {
         });
     }
 
-    update(marche) {
+    this.update = (marche) => {
         this.marcheService.update(marche._id, marche).then(() => {
             this.load();
         });
     }
 
-    delete(marche) {
+    this.delete = (marche) => {
         this.marcheService.delete(marche._id).then(() => {
             this.load();
         });
     }
+    this.load();
 
 }
