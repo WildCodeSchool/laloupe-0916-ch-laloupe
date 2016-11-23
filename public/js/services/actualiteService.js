@@ -1,30 +1,28 @@
-class actualiteService {
+function actualiteService ($http) {
 
-    constructor($http) {
-        this.$http = $http;
-    }
+        return {
+                create: function(data) {
+                        return $http.post('/api/actualites', data);
+                },
 
-    create(data) {
-        return this.$http.post('/api/actualites', data);
-    }
+                getAll: function() {
+                        return $http.get('/api/actualites');
+                },
 
-    getAll() {
-        return this.$http.get('/api/actualites');
-    }
+                getOne: function(id) {
+                        return $http.get('/api/actualites/' + id);
+                },
 
-    getOne(id) {
-        return this.$http.get('/api/actualites/' + id);
-    }
+                update: function(id, data) {
+                        return $http.put('/api/actualites/' + id, {
+                          titre: data.titre,
+                          texte: data.texte
+                        });
+                },
 
-    update(id, data) {
-        return this.$http.put('/api/actualites/' + id, {
-          titre: data.titre,
-          texte: data.texte
-        });
-    }
-
-    delete(id) {
-        return this.$http.delete('/api/actualites/' + id);
-    }
+                delete: function(id) {
+                        return $http.delete('/api/actualites/' + id);
+                }
+        }
 
 }
