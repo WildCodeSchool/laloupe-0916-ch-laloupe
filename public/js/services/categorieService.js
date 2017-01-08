@@ -1,4 +1,3 @@
-
 function categorieService($http) {
 
     return {

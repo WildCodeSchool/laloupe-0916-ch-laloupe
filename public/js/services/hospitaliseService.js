@@ -3,7 +3,7 @@ function hospitaliseService($http) {
     return {
 
         create: (data) => {
-            return $http.post('/api/btn2s', data )
+            return $http.post('/api/btn2s', data );
         },
 
         getAll: () =>{
@@ -11,7 +11,7 @@ function hospitaliseService($http) {
         },
 
         getOne: (id) =>{
-            return $http.get('/api/btn2s/' + id)
+            return $http.get('/api/btn2s/' + id);
         },
 
         update: (id, data) =>{
@@ -22,12 +22,12 @@ function hospitaliseService($http) {
               texte1: data.texte1,
               texte2: data.texte2,
               texte3: data.texte3
-            })
+            });
         },
 
         delete: (id) =>{
-            return $http.delete('/api/btn2s/' + id)
+            return $http.delete('/api/btn2s/' + id);
         }
 
-    }
+    };
 }

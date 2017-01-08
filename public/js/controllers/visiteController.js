@@ -7,6 +7,6 @@ function visiteController(visiteService) {
             this.btn4s = res.data;
             this.btn4 = this.btn4s[0];
         });
-    }
+    };
     this.load();
 }

@@ -6,6 +6,6 @@ function ehpadController(ehpadService) {
             this.btn3s = res.data;
             this.btn3 = this.btn3s[0];
         });
-    }
+    };
     this.load();
 }

@@ -5,9 +5,9 @@ function categorieController(categorieService, $routeParams) {
         toolbar: "forecolor | insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image",
         plugins: 'advlist fullscreen autolink link image lists charmap autoresize textcolor'
     };
-      this.categorie = {
-        "idparent":""
-      };
+    this.categorie = {
+        "idparent": ""
+    };
     this.categorieService = categorieService;
 
     function uploadFile(file) {
@@ -32,56 +32,59 @@ function categorieController(categorieService, $routeParams) {
             uploadFile(this.files[i]); // call the function to upload the file
         }
     }, false);
+
     this.showService = () => {
-      $(".serviceUpdate").hide();
-      var select = document.getElementById("serviceSelect");
-      var choice = select.selectedIndex;
-      var valeur = select.options[choice].value;
-      console.log(valeur);
-      $("#" + valeur).show();
+        $(".serviceUpdate").hide();
+        var select = document.getElementById("serviceSelect");
+        var choice = select.selectedIndex;
+        var valeur = select.options[choice].value;
+        console.log(valeur);
+        $("#" + valeur).show();
+    };
+
+    function uploadFileChangeImage() {
+        this.UploadImg = '/uploads/img_' + document.getElementById('uploadImage').value.split(/(\|\/)/g).pop().replace('C:\\fakepath\\', '');
+        console.log(document.getElementById('uploadImage').value);
     }
 
-    this.uploadFileChangeImage = () => {
-      this.UploadImg = '/uploads/img_' + document.getElementById('uploadImage').value.split(/(\|\/)/g).pop().replace('C:\\fakepath\\', '');
-      console.log(document.getElementById('uploadImage').value);
-    }
-
-    this.uploadFileChangeImageUpdate = (index) => {
-      this.UploadImgUpdate = '/uploads/img_' + document.getElementById('uploadImageUpdate' + index).value.split(/(\|\/)/g).pop().replace('C:\\fakepath\\', '');
-      console.log(this.UploadImgUpdate);
+    function uploadFileChangeImageUpdate(index) {
+        this.UploadImgUpdate = '/uploads/img_' + document.getElementById('uploadImageUpdate' + index).value.split(/(\|\/)/g).pop().replace('C:\\fakepath\\', '');
+        console.log(this.UploadImgUpdate);
     }
 
     this.load = () => {
-      this.categorieService.getAll().then((res) => {
-          this.categories = res.data;
-          var ServiceSelect = document.getElementById('serviceSelect').value;
-          console.log(document.getElementById('serviceSelect').value);
-      });
-    }
+        this.categorieService.getAll().then((res) => {
+            this.categories = res.data;
+            var ServiceSelect = document.getElementById('serviceSelect').value;
+            console.log(document.getElementById('serviceSelect').value);
+        });
+    };
 
     this.create = (categorie) => {
-      var urlImage = '/uploads/img_' + document.getElementById('uploadImage').value.split(/(\|\/)/g).pop().replace('C:\\fakepath\\', '');
+        var urlImage = '/uploads/img_' + document.getElementById('uploadImage').value.split(/(\|\/)/g).pop().replace('C:\\fakepath\\', '');
         this.categorie.photo = urlImage;
         console.log(categorie.position);
         this.categorieService.create(this.categorie).then(() => {
-          this.categorie = {
-            "idparent":""
-          };
-          this.load();
-          $("#ajout-0").hide();
+            this.categorie = {
+                "idparent": ""
+            };
+            this.load();
+            $("#ajout-0").hide();
         });
-    }
+    };
 
     this.update = (categorie) => {
         this.categorieService.update(categorie._id, categorie).then(() => {
             this.load();
         });
-    }
+    };
 
     this.delete = (categorie) => {
         this.categorieService.delete(categorie._id).then(() => {
             this.load();
         });
-    }
+    };
+
     this.load();
+
 }

@@ -1,25 +1,26 @@
-function aproposService ($http){
+function aproposService($http) {
 
-        return {
-            create: (data) => {
-                return $http.post('/api/aproposs', data);
-            },
+    this.$http = $http;
 
-            getAll: () => {
-                return $http.get('/api/aproposs');
-            },
+    this.create = (data) => {
+        return $http.post('/api/aproposs', data);
+    };
 
-            getOne: (id) => {
-                return $http.get('/api/aproposs/' + id);
-            },
-            update: (id, data) => {
-                return $http.put('/api/aproposs/' + id, {
-                  titre: data.titre,
-                  texte: data.texte
-                });
-            },
-            delete: (id) => {
-                return $http.delete('/api/aproposs/' + id);
-            }
-        }
+    this.getAll = () => {
+        return $http.get('/api/aproposs');
+    };
+
+    this.getOne = (id) => {
+        return $http.get('/api/aproposs/' + id);
+    };
+    this.update = (id, data) => {
+        return $http.put('/api/aproposs/' + id, {
+            titre: data.titre,
+            texte: data.texte
+        });
+    };
+    this.delete = (id) => {
+        return $http.delete('/api/aproposs/' + id);
+    };
+    
 }

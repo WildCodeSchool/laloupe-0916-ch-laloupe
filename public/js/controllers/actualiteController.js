@@ -20,6 +20,6 @@ function actualiteController(actualiteService) {
         this.actualiteService.getAll().then((res) => {
             this.actualites = res.data;
         });
-    }
+    };
     this.load();
 }

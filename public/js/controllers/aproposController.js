@@ -21,6 +21,6 @@ function aproposController(aproposService) {
         this.aproposService.getAll().then((res) => {
             this.aproposs = res.data;
         });
-    }
+    };
     this.load();
 }

@@ -6,7 +6,7 @@ function statController(statService) {
             this.stat = res.data;
             this.stats = res.data[0];
         });
-    }
+    };
     this.create = () => {
         if (this.stat.length > 0) this.stat.forEach((v, i) => {
             this.delete(v);
@@ -16,17 +16,17 @@ function statController(statService) {
             this.stats = {};
             this.load();
         });
-    }
+    };
     this.update = (stat) => {
         this.statService.update(stat._id, stat).then(() => {
             this.load();
         });
-    }
+    };
 
     this.delete = (stat) => {
         this.statService.delete(stat._id).then(() => {
             this.load();
         });
-    }
+    };
     this.load();
 }

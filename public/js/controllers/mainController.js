@@ -163,7 +163,7 @@ function mainController(rendezvousService, hospitaliseService, ehpadService, vis
             this.btn4 = this.btn4s[0];
         });
 
-    }
+    };
     this.create = () => {
         if (this.stat.length > 0) this.stat.forEach((v, i) => {
             this.delete(v);
@@ -173,17 +173,17 @@ function mainController(rendezvousService, hospitaliseService, ehpadService, vis
             this.stats = {};
             this.load();
         });
-    }
+    };
     this.update = (stat) => {
         this.statService.update(stat._id, stat).then(() => {
             this.load();
         });
-    }
+    };
 
     this.delete = (stat) => {
         this.statService.delete(stat._id).then(() => {
             this.load();
         });
-    }
+    };
     this.load();
 }

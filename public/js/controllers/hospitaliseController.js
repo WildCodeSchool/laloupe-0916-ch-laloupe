@@ -7,6 +7,6 @@ function hospitaliseController(hospitaliseService) {
             this.btn2s = res.data;
             this.btn2 = this.btn2s[0];
         });
-    }
+    };
     this.load();
 }

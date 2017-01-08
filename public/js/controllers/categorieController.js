@@ -17,6 +17,6 @@ function categorieController(categorieService, $routeParams) {
                 });
             }
         });
-    }
+    };
     this.load();
 }

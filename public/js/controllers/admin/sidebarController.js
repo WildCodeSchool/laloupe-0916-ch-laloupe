@@ -22,7 +22,7 @@ function sidebarController(sessionFactory, $rootScope, $window, $location, categ
         this.$rootScope.$emit('loginStatusChanged', false);
         this.isLogged = false;
         this.$location.path('/login');
-    }
+    };
 
 
 }

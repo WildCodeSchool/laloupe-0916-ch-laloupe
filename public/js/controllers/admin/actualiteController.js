@@ -1,5 +1,7 @@
 function actualiteController(actualiteService) {
+
     this.actualiteService = actualiteService;
+
     this.tinymceOptions = {
         toolbar: "forecolor | insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image",
         plugins: 'advlist fullscreen autolink link image lists charmap autoresize textcolor'
@@ -39,35 +41,35 @@ function actualiteController(actualiteService) {
 
     this.uploadFileChangeImage = () => {
       this.UploadImg = '/uploads/img_' + document.getElementById('uploadImage').value.split(/(\|\/)/g).pop().replace('C:\\fakepath\\', '');
-    }
+    };
 
     this.uploadFileChangeImageUpdate = () => {
       this.UploadImgUpdate = '/uploads/img_' + document.getElementById('uploadImageUpdate').value.split(/(\|\/)/g).pop().replace('C:\\fakepath\\', '');
-    }
+    };
 
     this.load = () => {
         this.actualiteService.getAll().then((res) => {
             this.actualites = res.data;
         });
-    }
+    };
     this.create = () => {
         this.actualiteService.create(this.actualite).then(() => {
             this.actualite = {};
             this.load();
         });
-    }
+    };
 
     this.update = (actualite) => {
         this.actualiteService.update(actualite._id, actualite).then(() => {
             this.load();
         });
-    }
+    };
 
     this.delete = (actualite) => {
         this.actualiteService.delete(actualite._id).then(() => {
             this.load();
         });
-    }
+    };
     this.load();
 
 }

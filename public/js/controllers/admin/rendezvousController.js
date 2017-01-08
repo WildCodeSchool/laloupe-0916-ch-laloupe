@@ -12,7 +12,7 @@ function rendezvousController(rendezvousService) {
             this.btn1s = res.data;
             this.btn1 = this.btn1s[0];
         });
-    }
+    };
 
     this.create = () => {
         if(this.btn1s.length > 0) this.btn1s.forEach((v,i) => {
@@ -23,19 +23,19 @@ function rendezvousController(rendezvousService) {
             this.load();
 
         });
-    }
+    };
 
     this.update = (btn1) => {
         this.rendezvousService.update(btn1._id, btn1).then(() => {
             this.load();
         });
-    }
+    };
 
     this.delete = (btn1) => {
         this.rendezvousService.delete(btn1._id).then(() => {
             this.load();
         });
-    }
+    };
     this.load();
 
 }

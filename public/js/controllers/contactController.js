@@ -14,10 +14,10 @@ function contactController(contactService) {
             this.contacts = res.data;
             console.log(this.contacts);
         });
-    }
+    };
 
     this.sendEmail = () => {
       this.contactService.sendMail(this.contact);
-    }
+    };
     this.load();
 }

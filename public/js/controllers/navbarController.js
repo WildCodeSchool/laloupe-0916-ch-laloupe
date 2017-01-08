@@ -36,7 +36,7 @@ function navbarController(categorieService) {
                 $(".dropdown-button").dropdown();
             }, 0);
         });
-    }
+    };
     this.loadCategories();
 
 }

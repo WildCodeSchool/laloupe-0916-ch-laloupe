@@ -32,36 +32,36 @@ function presseController(presseService) {
 
     this.uploadFileChangeImage = () => {
       this.UploadImg = '/uploads/img_' + document.getElementById('uploadImage').value.split(/(\|\/)/g).pop().replace('C:\\fakepath\\', '');
-    }
+    };
 
     this.uploadFileChangeImageUpdate = () => {
       this.UploadImgUpdate = '/uploads/img_' + document.getElementById('uploadImageUpdate').value.split(/(\|\/)/g).pop().replace('C:\\fakepath\\', '');
-    }
+    };
 
     this.load = () => {
         this.presseService.getAll().then((res) => {
             this.presses = res.data;
         });
-    }
+    };
     this.create = () => {
         this.presseService.create(this.presse).then(() => {
             this.presse = {};
             this.load();
         });
-    }
+    };
 
     this.update = (presse) => {
         this.presseService.update(presse._id, presse).then(() => {
             this.load();
         });
-    }
+    };
 
     this.delete = (presse) => {
         this.presseService.delete(presse._id).then(() => {
             this.load();
         });
-    }
-    
+    };
+
     this.load();
 
 }

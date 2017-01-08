@@ -22,6 +22,6 @@ function presseController(presseService) {
         this.presseService.getAll().then((res) => {
             this.presses = res.data;
         });
-    }
+    };
     this.load();
 }

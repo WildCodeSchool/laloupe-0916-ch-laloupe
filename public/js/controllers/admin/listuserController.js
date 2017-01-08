@@ -6,6 +6,6 @@ function listuserController(userService) {
         this.userService.getAll().then((res) => {
             this.users = res.data;
         });
-    }
+    };
     this.load();
 }

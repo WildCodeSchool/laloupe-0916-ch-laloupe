@@ -32,35 +32,35 @@ function aproposController(aproposService) {
 
     this.uploadFileChangeImage = () => {
       this.UploadImg = '/uploads/img_' + document.getElementById('uploadImage').value.split(/(\|\/)/g).pop().replace('C:\\fakepath\\', '');
-    }
+    };
 
     this.uploadFileChangeImageUpdate = () => {
       this.UploadImgUpdate = '/uploads/img_' + document.getElementById('uploadImageUpdate').value.split(/(\|\/)/g).pop().replace('C:\\fakepath\\', '');
-    }
+    };
 
     this.load = () => {
         this.aproposService.getAll().then((res) => {
             this.aproposs = res.data;
         });
-    }
+    };
     this.create = () => {
         this.aproposService.create(this.apropos).then(() => {
             this.apropos = {};
             this.load();
         });
-    }
+    };
 
     this.update = (apropos) => {
         this.aproposService.update(apropos._id, apropos).then(() => {
             this.load();
         });
-    }
+    };
 
     this.delete = (apropos) => {
         this.aproposService.delete(apropos._id).then(() => {
             this.load();
         });
-    }
+    };
     this.load();
 
 }

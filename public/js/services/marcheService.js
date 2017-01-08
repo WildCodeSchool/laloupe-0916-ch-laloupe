@@ -1,28 +1,29 @@
 function marcheService($http) {
 
-    return {
-        create: (data) => {
-            return this.$http.post('/api/marches', data);
-        },
+    this.$http = $http;
 
-        getAll: () => {
-            return this.$http.get('/api/marches');
-        },
 
-        getOne: (id) => {
-            return this.$http.get('/api/marches/' + id);
-        },
+    this.create = (data) => {
+        return this.$http.post('/api/marches', data);
+    };
 
-        update: (id, data) => {
-            return this.$http.put('/api/marches/' + id, {
-              titre: data.titre,
-              texte: data.texte
-            });
-        },
+    this.getAll = () => {
+        return this.$http.get('/api/marches');
+    };
 
-        delete: (id) => {
-            return this.$http.delete('/api/marches/' + id);
-        }
+    this.getOne = (id) => {
+        return this.$http.get('/api/marches/' + id);
+    };
 
-    }
+    this.update = (id, data) => {
+        return this.$http.put('/api/marches/' + id, {
+            titre: data.titre,
+            texte: data.texte
+        });
+    };
+
+    this.delete = (id) => {
+        return this.$http.delete('/api/marches/' + id);
+    };
+
 }

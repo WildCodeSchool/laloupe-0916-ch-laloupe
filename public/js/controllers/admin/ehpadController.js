@@ -11,7 +11,7 @@ function ehpadController(ehpadService) {
             this.btn3s = res.data;
             this.btn3 = this.btn3s[0];
         });
-    }
+    };
 
     this.create = () => {
         if(this.btn3s.length > 0) this.btn3s.forEach((v,i) => {
@@ -22,18 +22,18 @@ function ehpadController(ehpadService) {
             this.load();
 
         });
-    }
+    };
 
     this.update = (btn3) => {
         this.ehpadService.update(btn3._id, btn3).then(() => {
             this.load();
         });
-    }
+    };
 
     this.delete = (btn3) => {
         this.ehpadService.delete(btn3._id).then(() => {
             this.load();
         });
-    }
+    };
     this.load();
 }

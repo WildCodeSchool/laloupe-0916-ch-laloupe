@@ -15,6 +15,6 @@ function marcheController(marcheService) {
         this.marche = res.data;
         this.marches = res.data[0];
       });
-    }
+    };
     this.load();
   }

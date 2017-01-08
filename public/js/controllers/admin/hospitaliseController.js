@@ -6,14 +6,14 @@ function hospitaliseController(hospitaliseService) {
         plugins: 'advlist fullscreen autolink link image lists charmap autoresize textcolor'
     };
 
-    load = () => {
+    this.load = () => {
         this.hospitaliseService.getAll().then((res) => {
             this.btn2s = res.data;
             this.btn2 = this.btn2s[0];
         });
-    }
+    };
 
-    create = () => {
+    this.create = () => {
         if(this.btn2s.length > 0) this.btn2s.forEach((v,i) => {
           this.delete(v);
         });
@@ -22,19 +22,19 @@ function hospitaliseController(hospitaliseService) {
             this.load();
 
         });
-    }
+    };
 
-    update = (btn2) => {
+    this.update = (btn2) => {
         this.hospitaliseService.update(btn2._id, btn2).then(() => {
             this.load();
         });
-    }
+    };
 
-    delete = (btn2) => {
+    this.delete = (btn2) => {
         this.hospitaliseService.delete(btn2._id).then(() => {
             this.load();
         });
-    }
+    };
     this.load();
 
 }

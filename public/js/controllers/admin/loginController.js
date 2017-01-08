@@ -26,7 +26,7 @@ function loginController(userService, sessionFactory, $timeout, $location, $root
             this.loginMessage.title = "Sign in error";
             this.loginMessage.message = "Error login or password";
         });
-    }
+    };
 
     this.createAccount = () => {
         this.userService.create({
@@ -53,6 +53,6 @@ function loginController(userService, sessionFactory, $timeout, $location, $root
             this.loginMessage.title = "Sign up error";
             this.loginMessage.message = res.data;
         });
-    }
+    };
 
 }

@@ -11,7 +11,7 @@ function marcheController(marcheService) {
             this.marche = res.data;
             this.marches = res.data[0];
         });
-    }
+    };
     this.create2 = () => {
         if (this.marche.length > 0) this.marche.forEach((v, i) => {
             this.delete(v);
@@ -21,19 +21,19 @@ function marcheController(marcheService) {
             this.marches = {};
             this.load();
         });
-    }
+    };
 
     this.update = (marche) => {
         this.marcheService.update(marche._id, marche).then(() => {
             this.load();
         });
-    }
+    };
 
     this.delete = (marche) => {
         this.marcheService.delete(marche._id).then(() => {
             this.load();
         });
-    }
+    };
     this.load();
 
 }

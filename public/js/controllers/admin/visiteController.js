@@ -11,7 +11,7 @@ function visiteController(visiteService) {
             this.btn4s = res.data;
             this.btn4 = this.btn4s[0];
         });
-    }
+    };
 
     this.create = () => {
         if(this.btn4s.length > 0) this.btn4s.forEach((v,i) => {
@@ -22,19 +22,19 @@ function visiteController(visiteService) {
             this.load();
 
         });
-    }
+    };
 
     this.update = (btn4) => {
         this.visiteService.update(btn4._id, btn4).then(() => {
             this.load();
         });
-    }
+    };
 
     this.delete = (btn4) => {
         this.visiteService.delete(btn4._id).then(() => {
             this.load();
         });
-    }
+    };
     this.load();
 
 }
